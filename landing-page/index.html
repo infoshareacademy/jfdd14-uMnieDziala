@@ -4,16 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <!--dodane dzisiaj przypdkiem-->
+    <style>
+        header {
+          background-color: tomato;
+        }
+        @media only screen and (max-width: 600px) {
+          header {
+            background-color: lightblue;
+          }
+        }
+        </style>
 </head>
 <body>
-    
-    <header class="header">
+    <header class="header__menu">
+        <a href="#top" class="header__logo"><img src="img/100x100.png" alt="logo"></a>
         <nav>
-            <a href="#top"><img src="img/100x100.png" alt="logo"></a>
-            <a href="#functions">O aplikacji</a>
-            <a href="#details">Więcej informacji</a>
-            <a href="#sign-up">Zapisz się!</a>
-            <a href="#about">O nas</a>
+            <ul class="header__list">
+                <li><a href="#functions" class="header__button">O aplikacji</a></li>
+                <li><a href="#details" class="header__button">Więcej informacji</a></li>
+                <li><a href="#sign-up" class="header__button">Zapisz się!</a></li>
+                <li><a href="#about" class="header__button">O nas</a></li>
+            </ul>
         </nav>
     </header>
 

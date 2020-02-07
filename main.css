@@ -1,0 +1,35 @@
+
+header {
+background-color: tomato;
+}
+header:: after {
+    content: '';
+    display: table;
+    clear: both;
+}
+nav {
+    float: right;
+    display: flex;
+    align-items: center;
+}
+.header__logo{
+    float: left;
+}
+.header__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+.header__button{
+    display: inline-block;
+    margin: 0 35px;
+}
+
+.header__menu {
+    display: flex;
+    position: fixed;
+}
+.hero {
+    padding-top: 104px;
+}
