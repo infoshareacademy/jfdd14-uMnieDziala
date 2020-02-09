@@ -8,12 +8,13 @@ header:: after {
     clear: both;
 }
 nav {
-    float: right;
+    
     display: flex;
     align-items: center;
 }
 .header__logo{
-    float: left;
+
+    
 }
 .header__list{
     margin: 0;
@@ -21,14 +22,18 @@ nav {
     list-style: none;
     display: flex;
 }
+.header__list > li {
+    padding: 0 20px 0 20px;
+}
 .header__button{
     display: inline-block;
-    margin: 0 35px;
+    margin: 0;
 }
 
 .header__menu {
     display: flex;
     position: fixed;
+    width: 100%;
 }
 .hero {
     padding-top: 104px;
