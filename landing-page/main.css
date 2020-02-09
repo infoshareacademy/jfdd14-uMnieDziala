@@ -1,0 +1,32 @@
+/*VAR*/
+
+:root {
+    --color-dark: black;
+    --color-white: white;
+    --color-orange: orange;
+    --color-blue: blue;
+}
+
+
+/*STYLES*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
