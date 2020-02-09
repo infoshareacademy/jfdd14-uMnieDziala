@@ -1,7 +1,9 @@
 /* 
-#F1CEB2
-#CB9A72
-#7BACBB
+#293A41
+#564334
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Comfortaa', cursive;
 */
 
 *{
@@ -13,50 +15,86 @@
 .hero{
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 
-    margin: 0 auto;
-    padding: 10px;
-    background-image: url("img/banner.jpg");
+    background-image: url("img/banner1600.jpg");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
+
     width: 100%;
-    max-width: 1200px;
-    height: 500px;
-    font-family: 'Comfortaa', cursive;
+    max-width: 1600px;
+    height: 600px;
+    padding: 20px;
 }
 
 .hero__title{
-    margin-top: 10px;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 7vw;
     text-align: center;
+    font-family: 'Comfortaa', cursive;
 }
 
 .hero__bottom-box{
-    align-self: center;
-    width: min-content;
-    width: 80%;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.5);
+    max-width: 500px;
+
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .hero__secondary-title{
-    color: #F1CEB2;
-    font-size: 1.2rem;
-    text-align: center;
+    color: #fff;
+    font-size: 5vw;
+    padding: 20px 5px;
 }
 
 .hero__button{
-    display: block;
+    display: inline-block;
     width: fit-content;
     text-decoration: none;
-    color: #000;
-    background: #F1CEB2;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
     padding: 15px;
-    border: 3px solid #CB9A72;
-    border-radius: 10px;
-    font-size: 1.2rem;
+    border: 2px solid #fff;
+    border-radius: 5vw;
+    font-size: 5vw;
+}
+
+
+@media (max-width: 360px){
+    .hero__title{
+        font-size: 25px;
+    }
+    .hero__secondary-title{
+        font-size: 18px;
+    }
+    .hero__button{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 500px){
+    .hero__title{
+        font-size: 36px;
+    }
+    .hero__secondary-title{
+        font-size: 24px;
+    }
+    .hero__button{
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px){
+    .hero{
+        align-items: initial;
+    }
+    .hero__title{
+        text-align: left;
+    }
+    .hero__bottom-box{
+        align-self: flex-end;
+        text-align: right;
+    }
 }
