@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.sign-up {
+    background-color: rgb(234, 236, 241);
+    padding: 3rem;
+    margin: 2rem 0;
+}
+
+.sign-up__title {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 2rem 0;
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+    color: rgb(22, 97, 141);
+    text-align: center;
+}
+
+.sign-up__form {
+    display: flex;
+    justify-content: center;
+}
+
+.form__input {
+    border-radius: 20px;
+    height: 3rem;
+    text-align: center;
+    border: 1px solid rgb(22, 97, 141);
+    margin-right: 1rem;
+    outline: none;
+    background-color: rgb(241, 235, 235);
+}
+
+.form__button {
+    border-radius: 20px;
+    text-align: center;
+    height: 3rem;
+    width: 4rem;
+    border: none;
+    background-color: rgb(223, 128, 61);
+    color: cornsilk;
+    outline: none;
+}
+
+.form__info {
+    margin: 2rem 0;
+    font-size: 0.8rem;
+    color: rgb(172, 169, 169);
