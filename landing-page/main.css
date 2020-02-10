@@ -29,7 +29,7 @@ body {
 }
 
 header {
-    background-color: #564334;
+    background-color: black;
 }
 
 header::after {
@@ -75,7 +75,7 @@ nav {
 
 @media only screen and (max-width: 600px) {
     header {
-        background-color: #564334;
+        background-color: #293A41;
         display: block;
         position: fixed;
         height: 50%;
