@@ -1,0 +1,104 @@
+/* 
+#293A41
+#564334
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Comfortaa', cursive;
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: #000;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background-image: url("img/banner3-1600.jpg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    max-width: 1600px;
+    height: 600px;
+    padding: 20px;
+}
+
+.hero__title{
+    color: #fff;
+    font-size: 7vw;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+
+.hero__bottom-box{
+    max-width: 500px;
+
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero__secondary-title{
+    color: #fff;
+    font-size: 5vw;
+    padding: 20px 5px;
+}
+
+.hero__button{
+    display: inline-block;
+    width: fit-content;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border: 2px solid #fff;
+    border-radius: 5vw;
+    font-size: 5vw;
+}
+
+
+@media (max-width: 360px){
+    .hero__title{
+        font-size: 25px;
+    }
+    .hero__secondary-title{
+        font-size: 18px;
+    }
+    .hero__button{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 500px){
+    .hero__title{
+        font-size: 36px;
+    }
+    .hero__secondary-title{
+        font-size: 24px;
+    }
+    .hero__button{
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px){
+    .hero{
+        align-items: initial;
+    }
+    .hero__title{
+        text-align: left;
+    }
+    .hero__bottom-box{
+        align-self: flex-end;
+        text-align: right;
+    }
+}
