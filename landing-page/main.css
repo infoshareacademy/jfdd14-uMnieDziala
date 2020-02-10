@@ -50,7 +50,7 @@ nav {
     z-index: 1;
 }
 
-img {
+.nav__img {
     height: 60px;
     width: 60px;
     padding: 10px;
@@ -62,8 +62,7 @@ img {
     list-style: none;
     display: flex;
     z-index: 1;
-    font-family: 'Comfortaa', cursive;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Comfortaa', cursive, 'Montserrat', sans-serif;
 }
 
 .nav__list>li {
@@ -108,13 +107,10 @@ img {
     }
     .hero {
         padding-top: 156px !important;
-        background-position-y: 156px !important;
+        background-position-y: 150px !important;
     }
 }
 
 .body {
     margin: 0px;
-}
-
-
 }
