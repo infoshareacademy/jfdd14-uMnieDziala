@@ -1,3 +1,5 @@
+/* #293A41 blue */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,10 +10,11 @@
 
 .about {
     width: 100vw;
+    line-height: 1.5rem;
 }
 
 .about-wrap {
-    width: 80%;
+    width: 80vw;
     margin: 10%;
     display: flex;
     flex-direction: column;
@@ -20,32 +23,38 @@
 .about__pair {
     display: flex;
     flex-direction: column;
-    align-items: center ;
+    align-items: center;
+    justify-items: center;
 }
 
 .about__picture, .about__text {
     padding: 1rem;
-    margin: 1rem;
     text-align: center;
 }
 
 .about__picture {
-    border-radius: 50%;
-   
+    border-radius: 50%;   
 }
 
-.picture-wrap {
+/* .picture-wrap {
     width: 200px;
     height: 200px;
-}
+} */
 
-img[src*="julia"] {
-    width: 200px;
+img[src*="jpg"], img[src*="png"] {
+    width: 180px;
     height: auto;
 }
 
-img[src*="pawel"] {
-    width: 200px;
-    height: auto;
+.about__name {
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(29, 106, 136);
 }
 
+.about__text {
+    font-size: 1rem;
+    color: rgb(79, 80, 80);
+    font-style: oblique;
+    margin-bottom: 2rem;
+}
