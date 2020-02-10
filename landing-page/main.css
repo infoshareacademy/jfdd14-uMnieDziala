@@ -57,6 +57,7 @@ nav {
 .header__button {
     display: inline-block;
     margin: 0;
+    text-decoration: none;
 }
 
 .header__button:visited {
@@ -75,7 +76,7 @@ nav {
 
 @media only screen and (max-width: 600px) {
     header {
-        background-color: #293A41;
+        background-color: black;
         display: block;
         position: fixed;
         height: 50%;
