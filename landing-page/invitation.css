@@ -1,8 +1,20 @@
+
+/* 
+#293A41
+#564334
+font-family: 'Montserrat', sans-serif;
+font-family: 'Comfortaa', cursive;
+*/
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
+
+
 
 .sign-up {
     background-color: rgb(234, 236, 241);
@@ -16,7 +28,7 @@
     margin: 2rem 0;
     letter-spacing: 0.1rem;
     line-height: 2rem;
-    color: #564334;
+    color: #293A41;
     text-align: center;
 }
 
@@ -31,7 +43,7 @@
     min-width: 10rem;
     text-align: center;
     border: 1px solid #293A41;
-    margin-right: 1rem;
+    margin-right: 0.7rem;
     outline: none;
     background-color: rgba(241, 235, 235, 0.815);
 }
@@ -45,6 +57,7 @@
     background-color: #293A41;
     color: cornsilk;
     outline: none;
+    font-size: 1.1rem;
 }
 
 .form__info {
@@ -58,4 +71,6 @@
     .form__input {
         width: 20rem;
     }
+
+
 }
