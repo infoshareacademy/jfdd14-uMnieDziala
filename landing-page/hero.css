@@ -12,13 +12,17 @@ font-family: 'Comfortaa', cursive;
     padding: 0;
 }
 
+header{
+    background: #000;
+}
+
 .hero{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 
-    background-image: url("img/banner1600.jpg");
+    background-image: url("img/banner3-1600.jpg");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
