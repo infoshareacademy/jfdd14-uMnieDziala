@@ -6,20 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat&display=swap&subset=latin-ext" rel="stylesheet">
-<<<<<<< HEAD
     <script src="https://kit.fontawesome.com/9b64768612.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="functions.css">
-=======
     <link rel="stylesheet" type="text/css" href="menu.css">
     <link rel="stylesheet" type="text/css" href="invitation.css">
     <link rel="stylesheet" href="hero.css">
 
->>>>>>> 52676a40239d4c12bf7dc6941e63b65814ab4898
 </head>
 
 <body>
-    <!--dla całego dvia dodać padding wielkości baneru-->
     <div class="content">
 
         <nav class="nav__menu">
@@ -35,29 +31,10 @@
         </nav>
 
         <section id="hero" class="hero">
-            <!-- tu zdjęcie -->
             <h1 class="hero__title">Planujesz odwiedzić Trójmiasto?</h1>
             <div class="hero__bottom-box">
                 <h2 class="hero__secondary-title">Sprawdź możliwości aplikacji tripcity. Stwórz spersonalizowany plan wyjazdu i odkryj miejsca idealne <br>dla Ciebie!</h2>
                 <a href="#sign-up" class="hero__button">Chcę wiedzieć więcej!</a>
-            </div>
-        </section>
-
-        <section id="functions" class="functions">
-            <div>
-                <img src="img/100x100.png">
-                <h3>Pierwsza super funkcja</h3>
-                <p>Opis pierwszej funkcji</p>
-            </div>
-            <div>
-                <img src="img/100x100.png">
-                <h3>Druga super funkcja</h3>
-                <p>Opis drugiej funkcji</p>
-            </div>
-            <div>
-                <img src="img/100x100.png">
-                <h3>Trzecia super funkcja</h3>
-                <p>Opis trzeciej funkcji</p>
             </div>
         </section>
 
@@ -101,7 +78,16 @@
         </div>
     </section>
 
-
+    <section id="sign-up" class="sign-up">
+        <h3 class="sign-up__title">
+            Chcesz zwiedzić z nami Trójmiasto? Zostaw nam maila a poinformujemy Cię, gdy pojawią się nowe funkcje.
+        </h3>
+        <form class="sign-up__form">
+            <input class="form__input" type="email" required name="input" placeholder="Tu wpisz maila">
+            <input class="form__button" type="submit" value="ok">
+        </form>
+        <p class="form__info">Na podany adres zostanie wysłany tylko jeden email. Twoje dane są z nami bezpieczne.</p>
+    </section>
 
         <section id="about" class="about">
             <!-- cztery elementy ze zdjęciami i opisami -->
