@@ -1,32 +1,12 @@
-/*VAR*/
 
-:root {
-    --color-dark: black;
-    --color-white: white;
-    --color-orange: orange;
-    --color-blue: blue;
+header {
+    background-color: black;
 }
 
-
-/*STYLES*/
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    margin-top: 0px;
-    margin-left: 0px;
-}
-
-.content {
-    width: 100%;
-    min-width: 320px;
-    max-width: 1600px;
-    margin: 0 auto;
-    position: relative;
+header::after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
 nav {
@@ -81,6 +61,11 @@ nav {
     color: white;
 }
 
+.header__menu {
+    display: flex;
+    position: fixed;
+    width: 100%;
+}
 .hero {
     padding-top: 64px;
 }
