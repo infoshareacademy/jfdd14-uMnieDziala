@@ -55,6 +55,31 @@ img[src*="jpg"], img[src*="png"] {
 .about__text {
     font-size: 1rem;
     color: rgb(79, 80, 80);
-    font-style: oblique;
     margin-bottom: 2rem;
+}
+
+.about__icons {
+    display: flex;
+}
+
+.about__icon {
+    padding: 0.5rem;
+    color: rgb(79, 100, 109);
+
+}
+
+/* 1024px for iPad Pro */
+
+@media (min-width: 1025px) {
+    .about-wrap {
+        flex-direction: row;
+    }
+
+    .about__pair {
+        flex-basis: 25%;
+    }
+
+    .about__picture, .about__text {
+        padding: 2rem;
+    }
 }
