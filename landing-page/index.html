@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat&display=swap&subset=latin-ext" rel="stylesheet">
+<<<<<<< HEAD
     <script src="https://kit.fontawesome.com/9b64768612.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="functions.css">
-</head>
-<body>
-    
-    <header class="header">
-        <nav>
-            <a href="#top"><img src="img/100x100.png" alt="logo"></a>
-            <a href="#functions">O aplikacji</a>
-            <a href="#details">Więcej informacji</a>
-            <a href="#sign-up">Zapisz się!</a>
-            <a href="#about">O nas</a>
-        </nav>
-    </header>
+=======
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" type="text/css" href="invitation.css">
+    <link rel="stylesheet" href="hero.css">
 
-    <section id="hero" class="hero">
-        <!-- tu zdjęcie -->
-        <h1>Planujesz odwiedzić Trójmiasto?</h1>
-        <h2>Nasza aplikacja stworzy spersonalizowany plan Twojego pobytu</h2>
-        <a href="#sign-up">Zapisz się!</a>
-    </section>
+>>>>>>> 52676a40239d4c12bf7dc6941e63b65814ab4898
+</head>
+
+<body>
+    <!--dla całego dvia dodać padding wielkości baneru-->
+    <div class="content">
+
+        <nav class="nav__menu">
+            <a href="#top" class="nav__logo"><img class="nav__img" src="img/logo_white.png" alt="logo"></a>
+            <div>
+                <ul class="nav__list">
+                    <li><a href="#functions" class="nav__button">O aplikacji</a></li>
+                    <li><a href="#details" class="nav__button">Więcej informacji</a></li>
+                    <li><a href="#sign-up" class="nav__button">Zapisz się!</a></li>
+                    <li><a href="#about" class="nav__button">O nas</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="hero" class="hero">
+            <!-- tu zdjęcie -->
+            <h1 class="hero__title">Planujesz odwiedzić Trójmiasto?</h1>
+            <div class="hero__bottom-box">
+                <h2 class="hero__secondary-title">Sprawdź możliwości aplikacji tripcity. Stwórz spersonalizowany plan wyjazdu i odkryj miejsca idealne <br>dla Ciebie!</h2>
+                <a href="#sign-up" class="hero__button">Chcę wiedzieć więcej!</a>
+            </div>
+        </section>
+
+        <section id="functions" class="functions">
+            <div>
+                <img src="img/100x100.png">
+                <h3>Pierwsza super funkcja</h3>
+                <p>Opis pierwszej funkcji</p>
+            </div>
+            <div>
+                <img src="img/100x100.png">
+                <h3>Druga super funkcja</h3>
+                <p>Opis drugiej funkcji</p>
+            </div>
+            <div>
+                <img src="img/100x100.png">
+                <h3>Trzecia super funkcja</h3>
+                <p>Opis trzeciej funkcji</p>
+            </div>
+        </section>
 
     <section id="functions" class="functions">
         <div class="functions__box">
@@ -68,17 +101,16 @@
         </div>
     </section>
 
-    <section id="sign-up" class="sign-up">
-        <!-- formularz do podania maila -->
-    </section>
 
-    <section id="about" class="sign-up">
-        <!-- cztery elementy ze zdjęciami i opisami -->
-    </section>
 
-    <footer class="footer">
+        <section id="about" class="about">
+            <!-- cztery elementy ze zdjęciami i opisami -->
+        </section>
 
-    </footer>
+        <footer class="footer">
 
+        </footer>
+    </div>
 </body>
+
 </html>
