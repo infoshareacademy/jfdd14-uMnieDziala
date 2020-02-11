@@ -1,38 +1,44 @@
+.functions{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;
+}
+
 .functions__box {
     display: flex;
     flex-direction: column;
-    width: 100%;
     align-items: center;
-    padding: 20px;
 }
 
-.fas, .far {
+.functions .fas, .far {
+    display: block;
     font-size: 50px;
+    text-align: center;
+    color: var(--color-blue);
+    padding: 15px;
 
 }
 .functions__title {
-    font-size: medium;
+    font-size: 1.4rem;
     text-align: center;
     padding: 20px;
     font-family: 'Comfortaa', cursive; 
 }
-@media only screen and (min-width: 768px){
+@media (min-width: 880px){
     .functions{
-       display: flex;
        flex-direction: row;
-       width: 100%;
     }
 
     .functions__box{
-        padding: 50px;
     }
    
-    .fas, .far {
+    .functions .fas, .far {
         font-size: 60px;
     }
 
     .functions__title {
-        font-size: x-large;
+        font-size: 1.4rem;
         text-align: center;
         padding: 20px;
         font-family: 'Comfortaa', cursive; 
