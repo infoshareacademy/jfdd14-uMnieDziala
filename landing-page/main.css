@@ -40,7 +40,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1;
-    background-color: black;
+    background-color: #000;
     justify-content: space-between;
     max-width: 1600px;
     align-items: center;
@@ -73,7 +73,6 @@ nav {
     display: inline-block;
     margin: 0;
     text-decoration: none;
-    background-color: black;
     z-index: 1;
 }
 
@@ -101,13 +100,17 @@ nav {
     }
     .nav__list {
         flex-direction: column;
+        text-align: center;
     }
     .nav__list>li {
         padding: 10px;
     }
     .hero {
-        padding-top: 156px !important;
+        padding-top: 216px !important;
         background-position-y: 150px !important;
+    }
+    .nav__menu {
+        flex-direction: column;
     }
 }
 
