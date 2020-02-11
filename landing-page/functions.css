@@ -1,0 +1,40 @@
+.functions__box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+}
+
+.fas, .far {
+    font-size: 50px;
+
+}
+.functions__title {
+    font-size: medium;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Comfortaa', cursive; 
+}
+@media only screen and (min-width: 768px){
+    .functions{
+       display: flex;
+       flex-direction: row;
+       width: 100%;
+    }
+
+    .functions__box{
+        padding: 50px;
+    }
+   
+    .fas, .far {
+        font-size: 60px;
+    }
+
+    .functions__title {
+        font-size: x-large;
+        text-align: center;
+        padding: 20px;
+        font-family: 'Comfortaa', cursive; 
+    }
+}
