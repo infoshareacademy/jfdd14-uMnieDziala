@@ -74,6 +74,7 @@ nav {
     margin: 0;
     text-decoration: none;
     z-index: 1;
+    color: white;
 }
 
 .nav__button:visited {
