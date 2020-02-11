@@ -1,10 +1,10 @@
 /*VAR*/
 
 :root {
-    --color-dark: black;
-    --color-white: white;
-    --color-orange: orange;
-    --color-blue: blue;
+    --color-dark: rgb(46, 46, 46);
+    --color-white: #fff;
+    --color-light-blue: #dde9ec;
+    --color-blue: #577482;
 }
 
 
@@ -24,11 +24,11 @@ body {
 .content {
     width: 100%;
     min-width: 320px;
-    max-width: 1600px;
+    max-width: 1800px;
     margin: 0 auto;
 }
 
-header {
+/* header {
     background-color: black;
 }
 
@@ -67,7 +67,7 @@ nav {
     display: flex;
     position: fixed;
     width: 100%;
-}
+} */
 
 .hero {
     padding-top: 104px;
