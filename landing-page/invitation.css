@@ -1,11 +1,4 @@
 
-/* 
-#293A41
-#564334
-font-family: 'Montserrat', sans-serif;
-font-family: 'Comfortaa', cursive;
-*/
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,7 +10,7 @@ font-family: 'Comfortaa', cursive;
 
 
 .sign-up {
-    background-color: rgb(234, 236, 241);
+    background-color: var(--color-light-blue);
     padding: 3rem;
     margin: 2rem 0;
 }
@@ -28,7 +21,7 @@ font-family: 'Comfortaa', cursive;
     margin: 2rem 0;
     letter-spacing: 0.1rem;
     line-height: 2rem;
-    color: #293A41;
+    color: var(--color-dark);
     text-align: center;
 }
 
@@ -54,7 +47,7 @@ font-family: 'Comfortaa', cursive;
     height: 3rem;
     min-width: 4rem;
     border: none;
-    background-color: #293A41;
+    background-color: var(--color-blue);
     color: cornsilk;
     outline: none;
     font-size: 1.1rem;

@@ -70,10 +70,6 @@ nav {
     padding-top: 64px;
 }
 
-.functions {
-    padding-top: 64px;
-}
-
 @media only screen and (max-width: 600px) {
     header {
         background-color: black;
