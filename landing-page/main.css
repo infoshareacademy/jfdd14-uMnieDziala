@@ -1,10 +1,10 @@
 /*VAR*/
 
 :root {
-    --color-dark: black;
-    --color-white: white;
-    --color-orange: orange;
-    --color-blue: blue;
+    --color-dark: rgb(29, 29, 29);
+    --color-white: #fff;
+    --color-light-blue: rgb(208, 226, 236);
+    --color-blue: #3A515F;
 }
 
 
@@ -16,17 +16,14 @@
     padding: 0;
 }
 
+body {
+    margin-top: 0px;
+    margin-left: 0px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.content {
+    width: 100%;
+    min-width: 320px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
