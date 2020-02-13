@@ -34,7 +34,7 @@ header{
 }
 
 .hero__title{
-    color: #fff;
+    color: var(--color-light-blue);
     font-size: 7vw;
     text-align: center;
     font-family: 'Comfortaa', cursive;
@@ -48,7 +48,7 @@ header{
 }
 
 .hero__secondary-title{
-    color: #fff;
+    color: var(--color-light-blue);
     font-size: 5vw;
     padding: 20px 5px;
 }
@@ -57,10 +57,10 @@ header{
     display: inline-block;
     width: fit-content;
     text-decoration: none;
-    color: #fff;
+    color: var(--color-light-blue);
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
-    border: 2px solid #fff;
+    border: 2px solid var(--color-light-blue);
     border-radius: 5vw;
     font-size: 5vw;
 }

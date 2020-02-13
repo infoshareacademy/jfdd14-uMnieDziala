@@ -116,7 +116,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 7px;
 }
 
 .header__logo{
@@ -125,6 +125,15 @@ nav {
 
 .header__img{
     height: 50px;
+    padding-left: 10px;
+}
+
+.header__name{
+    padding-left: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--color-blue);
+    font-weight: 900;
 }
 
 .header__button {
