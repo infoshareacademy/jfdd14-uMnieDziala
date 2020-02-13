@@ -1,5 +1,5 @@
 
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -7,11 +7,11 @@
     font-family: 'Comfortaa', cursive;
 }
 
-
+ */
 
 .sign-up {
     background-color: var(--color-light-blue);
-    padding: 3rem;
+    padding: 70px 20px 30px;
     margin: 2rem 0;
 }
 
