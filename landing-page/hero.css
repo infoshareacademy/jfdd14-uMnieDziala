@@ -51,6 +51,7 @@ header{
     color: var(--color-light-blue);
     font-size: 5vw;
     padding: 20px 5px;
+    font-weight: normal;
 }
 
 .hero__button{
