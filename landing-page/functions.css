@@ -1,8 +1,9 @@
 .functions{
     width: 100%;
+    max-width: 2000px;
     display: flex;
     flex-direction: column;
-    padding: 30px 10px;
+    padding: 70px 10px 30px;
 }
 
 .functions__box {
@@ -29,10 +30,9 @@
     .functions{
         max-width: 90%;
        flex-direction: row;
+       justify-content: space-around;
     }
 
-    .functions__box{
-    }
    
     .functions .fas, .far {
         font-size: 60px;
