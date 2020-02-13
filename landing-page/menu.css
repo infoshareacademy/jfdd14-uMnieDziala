@@ -148,7 +148,8 @@ nav {
     
     header:hover .header__nav .header__button{
         display: block;
-        padding: 10px;
+        padding: 5px;
+        font-size: 18px;
     }
 }
 
