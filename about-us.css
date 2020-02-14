@@ -1,12 +1,16 @@
 
 .about {
     width: 100vw;
+    max-width: 1300px;
     line-height: 1.5rem;
+    margin: 0 auto;
+    padding-top: 70px;
 }
 
 .about-wrap {
     width: 80vw;
-    margin: 10%;
+    max-width: 1300px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
@@ -28,13 +32,6 @@
     width: 180px;
     height: auto;   
 }
-
-/* .picture-wrap {
-    width: 200px;
-    height: 200px;
-} */
-
-
 
 .about__name {
     text-align: center;

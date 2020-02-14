@@ -1,17 +1,3 @@
-/* 
-#293A41
-#564334
-
-font-family: 'Montserrat', sans-serif;
-font-family: 'Comfortaa', cursive;
-*/
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 header{
     background: #000;
 }
@@ -52,6 +38,7 @@ header{
     font-size: 5vw;
     padding: 20px 5px;
     font-weight: normal;
+    text-shadow: 2px 2px 3px var(--color-dark);
 }
 
 .hero__button{
@@ -59,11 +46,12 @@ header{
     width: fit-content;
     text-decoration: none;
     color: var(--color-light-blue);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     padding: 15px;
-    border: 2px solid var(--color-light-blue);
-    border-radius: 5vw;
+    border: 3px solid var(--color-light-blue);
+    border-radius: 30px;
     font-size: 5vw;
+    text-shadow: 2px 2px 3px var(--color-dark);
 }
 
 
@@ -87,7 +75,7 @@ header{
         font-size: 24px;
     }
     .hero__button{
-        font-size: 24px;
+        font-size: 28px;
     }
 }
 
@@ -101,5 +89,8 @@ header{
     .hero__bottom-box{
         align-self: flex-end;
         text-align: right;
+    }
+    .hero__secondary-title{
+        font-size: 28px;
     }
 }
