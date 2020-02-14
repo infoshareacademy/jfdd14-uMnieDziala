@@ -3,7 +3,7 @@
     max-width: 2000px;
     display: flex;
     flex-direction: column;
-    padding: 70px 10px 30px;
+    padding: 70px 10px 0;
     margin: 0 auto;
 }
 
@@ -13,12 +13,13 @@
     align-items: center;
 }
 
-.functions .fas, .far {
+.functions .fas, .functions .far {
     display: block;
     font-size: 50px;
     text-align: center;
-    color: var(--color-blue);
     padding: 15px;
+    color:   var(--color-blue);
+    
 
 }
 .functions__title {
@@ -32,12 +33,15 @@
     .functions{
        flex-direction: row;
        justify-content: center;
-       background: var(--color-light-blue);
+       background: rgb(89,125,137);
+       background: linear-gradient(180deg, rgba(89,125,137,1) 0%, rgba(255,255,255,1) 100%);
     }
 
    
-    .functions .fas, .far {
+    .functions .fas, .functions .far {
         font-size: 60px;
+        opacity: 0.6;
+        color: whitesmoke;
     }
 
     .functions__title {
