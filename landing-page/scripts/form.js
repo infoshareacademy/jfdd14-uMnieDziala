@@ -24,6 +24,8 @@ function emailToStorage(event) {
         alert("Adres email jest niepoprawny.")
     } else {
         localStorage.setItem("email", inputValue);
+        alert("Dziękujemy :)")
+
     } 
 }
 
