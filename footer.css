@@ -1,0 +1,14 @@
+.footer{
+    background: var(--color-light-blue);
+    padding: 30px;
+}
+
+.footer__text, .footer__small-text{
+    color: var(--color-grey);
+    text-align: center;
+    padding: 5px;
+}
+
+.footer__small-text{
+    font-size: 0.8rem;
+}
