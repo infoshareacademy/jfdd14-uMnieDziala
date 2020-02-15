@@ -61,6 +61,10 @@
     color: var(--color-blue);
 }
 
+.about__icon--hidden {
+    display: none;
+}
+
 /* 1024px for iPad Pro */
 
 @media (min-width: 1025px) {

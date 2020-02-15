@@ -43,6 +43,7 @@
     color: var(--color-light-blue);
     outline: none;
     font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .form__info {
