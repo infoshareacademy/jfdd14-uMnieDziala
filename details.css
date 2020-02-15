@@ -3,7 +3,10 @@
     flex-direction: column;
 
     width: 100%;
+    max-width: 1300px;
     padding-top: 70px;
+    padding-bottom: 30px;
+    margin: 0 auto;
 }
 
 .details__box:nth-last-child(even){
@@ -20,7 +23,7 @@
 .details .fas, .far{
     color: var(--color-blue);
     width: 25%;
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     text-align: center;
     padding: 20px;
 }
@@ -38,6 +41,7 @@
     .details{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        justify-content: center;
     }
     .details__box:nth-last-child(even){
         background: none;
