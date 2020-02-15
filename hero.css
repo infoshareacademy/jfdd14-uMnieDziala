@@ -15,11 +15,12 @@ header{
 
     width: 100%;
     max-width: 2000px;
-    height: 600px;
+    height: 540px;
     padding: 20px;
 }
 
 .hero__title{
+    padding-top: 10px;
     color: var(--color-light-blue);
     font-size: 7vw;
     text-align: center;
@@ -28,7 +29,7 @@ header{
 
 .hero__bottom-box{
     max-width: 500px;
-
+    padding: 24px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
@@ -83,14 +84,17 @@ header{
     .hero{
         align-items: initial;
     }
-    .hero__title{
-        text-align: left;
-    }
     .hero__bottom-box{
         align-self: flex-end;
         text-align: right;
     }
     .hero__secondary-title{
         font-size: 28px;
+    }
+}
+
+@media (min-width: 1400px){
+    .hero{
+        height: 640px;
     }
 }
