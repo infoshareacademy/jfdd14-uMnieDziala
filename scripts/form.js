@@ -16,12 +16,12 @@ function validateEmail(email) {
 function emailToStorage(event) {
     event.preventDefault();
     let inputValue = input.value;
-    if (!inputValue) {
-        alert("podaj maila")
-    }
     let isEmail = validateEmail(inputValue);
-    if (!isEmail) {
-        alert("Adres email jest niepoprawny.")
+    if (!inputValue) {
+        alert("Podaj adres email")
+    }
+    else if (!isEmail) {
+        alert("Niepoprawny adres email")
     } else {
         localStorage.setItem("email", inputValue);
         alert("Dziękujemy :)")
