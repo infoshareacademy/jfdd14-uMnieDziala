@@ -65,6 +65,27 @@
     display: none;
 }
 
+/* rotation */
+
+.about__animation{
+    perspective: 1000px;
+    width: 200px;
+    height: auto;
+}
+
+.about__pair{
+    position: relative;
+
+}
+
+
+.about__animation:hover .about__pair {
+ transform: rotateY(180deg);
+ 
+}
+
+
+
 /* 1024px for iPad Pro */
 
 @media (min-width: 1025px) {
