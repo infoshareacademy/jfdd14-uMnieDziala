@@ -4,11 +4,9 @@ header{
 
 .hero{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 
-    background-image: url("img/banner3-1600.jpg");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -16,11 +14,46 @@ header{
     width: 100%;
     max-width: 2000px;
     height: 540px;
-    padding: 20px;
+    padding: 20px 0;
+}
+.hero--image1{
+    background-image: url("img/banner3-1600.jpg");
+}
+.hero--image2{
+    background-image: url("img/banner.jpg");
+}
+.hero--image3{
+    background-image: url("img/banner1600.jpg");
+}
+
+
+.hero__main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.hero__arrow{
+    height: 100%;
+    padding: 10px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.3);
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hero__arrow:hover{
+    color: var(--color-light-blue);
+}
+.hero__arrow:focus {
+    outline: none;
 }
 
 .hero__title{
-    padding-top: 10px;
     color: var(--color-light-blue);
     font-size: 7vw;
     text-align: center;
@@ -29,7 +62,7 @@ header{
 
 .hero__bottom-box{
     max-width: 500px;
-    padding: 24px;
+    padding: 20px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
