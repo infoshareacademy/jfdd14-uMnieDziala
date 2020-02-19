@@ -18,26 +18,14 @@
     width: 80vw;
     max-width: 1300px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.about__pair {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-}
-
-.about__picture, .about__text {
-    padding: 1rem;
-    text-align: center;
+    /*display: flex;
+    //flex-direction: column;*/
 }
 
 .about__picture {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    width: 180px;
-    height: auto;   
 }
 
 .about__name {
@@ -52,13 +40,11 @@
     margin-bottom: 2rem;
 }
 
-.about__icons {
-    display: flex;
-}
 
 .about__icon {
     padding: 0.5rem;
-    color: var(--color-blue);
+    color: var(--color-white);
+    font-size: 1.5rem;
 }
 
 .about__icon--hidden {
@@ -67,29 +53,60 @@
 
 /* rotation */
 
+.animation__container {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.animation__container__inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.animation__container:hover .animation__container__inner {
+    transform: rotateY(180deg);
+}
+
 .about__animation{
     perspective: 1000px;
     width: 200px;
-    height: auto;
-}
-
-.about__pair{
-    position: relative;
-
+    height: 200px;
 }
 
 
-.about__animation:hover .about__pair {
- transform: rotateY(180deg);
- 
+.animation-front, .animation-back {
+    position: absolute;
+    backface-visibility: hidden;
 }
 
+.animation-front{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+}
+
+.animation-back{
+    background-color: var(--color-grey);
+    border-radius: 50%;
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 /* 1024px for iPad Pro */
 
 @media (min-width: 1025px) {
-    .about-us_title {
+   /*  .about-us_title {
         font-size: 1.8rem;
     }
 
@@ -103,5 +120,5 @@
 
     .about__picture, .about__text {
         padding: 2rem;
-    }
+    } */
 }
