@@ -3,8 +3,7 @@
     width: 100%;
     max-width: 1300px;
     line-height: 1.5rem;
-    margin: 0 auto;
-    padding-top: 70px;
+    margin: 6% auto;
 }
 
 .about-us_title {
@@ -18,8 +17,10 @@
     width: 80vw;
     max-width: 1300px;
     margin: 0 auto;
-    /*display: flex;
-    //flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
 }
 
 .about__picture {
@@ -30,14 +31,9 @@
 
 .about__name {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--color-dark);
-}
-
-.about__text {
-    font-size: 1rem;
-    color: var(--color-dark);
-    margin-bottom: 2rem;
+    padding: 1rem;
 }
 
 
@@ -57,15 +53,16 @@
     background-color: transparent;
     width: 300px;
     height: 300px;
-    perspective: 1000px;
-}
+    margin: 3rem;
+    /* perspective: 1000px; */
+} 
 
 .animation__container__inner{
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 1s;
+    transition: transform 1.5s;
     transform-style: preserve-3d;
 }
 
@@ -82,12 +79,12 @@
 
 .animation-front, .animation-back {
     position: absolute;
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
 }
 
 .animation-front{
     width: 100%;
-    height: 100%;
+    height: 100%; 
     border-radius: 50%; 
 }
 
@@ -103,22 +100,21 @@
 }
 
 
+
+
 /* 1024px for iPad Pro */
 
 @media (min-width: 1025px) {
-   /*  .about-us_title {
+     .about-us_title {
         font-size: 1.8rem;
     }
 
     .about-wrap {
         flex-direction: row;
+        justify-content: space-around;
     }
 
     .about__pair {
         flex-basis: 25%;
     }
-
-    .about__picture, .about__text {
-        padding: 2rem;
-    } */
 }
