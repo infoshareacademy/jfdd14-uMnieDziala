@@ -3,7 +3,7 @@
     width: 100%;
     max-width: 1300px;
     line-height: 1.5rem;
-    margin: 6% auto;
+    margin: 8% auto;
 }
 
 .about-us_title {
@@ -21,6 +21,11 @@
     flex-direction: column;
     align-items: center;
     align-content: space-around;
+}
+
+.test {
+    display: flex;
+    flex-direction: column;
 }
 
 .about__picture {
@@ -51,10 +56,10 @@
 
 .animation__container {
     background-color: transparent;
-    width: 300px;
-    height: 300px;
-    margin: 3rem;
-    /* perspective: 1000px; */
+    width: 150px;
+    height: 150px;
+    perspective: 1000px;
+    margin: 1rem;
 } 
 
 .animation__container__inner{
@@ -69,13 +74,6 @@
 .animation__container:hover .animation__container__inner {
     transform: rotateY(180deg);
 }
-
-.about__animation{
-    perspective: 1000px;
-    width: 200px;
-    height: 200px;
-}
-
 
 .animation-front, .animation-back {
     position: absolute;
