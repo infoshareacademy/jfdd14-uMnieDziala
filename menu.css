@@ -42,6 +42,10 @@
     color: white;
 }
 
+.active {
+    color: red;
+}
+
 @media (max-width: 899px){
     .header__nav{
         display: none;

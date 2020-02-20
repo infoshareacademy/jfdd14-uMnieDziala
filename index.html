@@ -25,10 +25,10 @@
 
         <header class="header">
             <div class="header__menu">
-                <a href="#top" class="header__logo">
+                <a href="#hero" class="header__logo">
                     <img class="header__img" src="img/logo_white.png" alt="logo">
+                    tripcity
                 </a>
-                <a href="#top" class="header__name">tripcity</a>
                 <a class="header__button">menu</a>
             </div>
             <nav class="header__nav">
@@ -39,7 +39,7 @@
             </nav>
         </header>
 
-        <section id="hero" class="hero">
+        <section id="hero" class="hero active">
             <h1 class="hero__title">Planujesz odwiedzić Trójmiasto?</h1>
             <div class="hero__bottom-box">
                 <h2 class="hero__secondary-title">Wypróbuj tripcity!<br>Stwórz spersonalizowany<br>plan wyjazdu i odkryj<br>miejsca idealne dla Ciebie</h2>
@@ -47,7 +47,7 @@
             </div>
         </section>
 
-        <section id="functions" class="functions">
+        <section id="functions" class="functions" data-section="section">
             <div class="functions__box">
                 <i class="fas fa-clipboard-list"></i>
                 <h2 class="functions__title">Stwórz plan wyjazdu</h2>
@@ -69,7 +69,7 @@
             </div>
         </section>
 
-        <section id="details" class="details">
+        <section id="details" class="details" data-section="sections">
             <div class="details__box">
                 <i class="fas fa-clipboard-list"></i>
                 <p class="details__text">Z pomocą tripcity stworzysz spersonalizowany plan wyjazdu do Trójmiasta</p>
@@ -104,7 +104,7 @@
             </div>
         </section>
 
-        <section id="sign-up" class="sign-up">
+        <section id="sign-up" class="sign-up" data-section="section">
             <h3 class="sign-up__title">
                 Chcesz zwiedzić z nami Trójmiasto? <br>Zostaw nam maila a poinformujemy Cię, gdy pojawią się nowe funkcje.
             </h3>
@@ -115,7 +115,7 @@
             <p class="form__info">Na podany adres zostanie wysłany tylko jeden email. Twoje dane są z nami bezpieczne.</p>
         </section>
 
-        <section id="about" class="about">
+        <section id="about" class="about" data-section="section">
             <h2 class="about-us_title">O twórcach aplikacji</h2>
             <div class="about-wrap">
                 <div class="about__pair">
@@ -185,6 +185,7 @@
 
     </div>
     <script src="scripts/form.js"></script>
+    <script src="scripts/nav-backlight.js"></script>
 </body>
 
 </html>

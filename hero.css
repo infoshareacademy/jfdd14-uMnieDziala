@@ -55,6 +55,10 @@ header{
     text-shadow: 2px 2px 3px var(--color-dark);
 }
 
+.hero__active {
+    color:red;
+}
+
 
 @media (max-width: 360px){
     .hero__title{
