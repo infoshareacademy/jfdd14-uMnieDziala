@@ -18,12 +18,15 @@ header{
 }
 .hero--image1{
     background-image: url("img/banner3-1600.jpg");
+    transition: background-image 1s ease-in-out;
 }
 .hero--image2{
-    background-image: url("img/banner.jpg");
+    background-image: url("img/banner-city.jpg");
+    transition: background-image 1s ease-in-out;
 }
 .hero--image3{
-    background-image: url("img/banner1600.jpg");
+    background-image: url("img/banner-sunglasses.jpg");
+    transition: background-image 1s ease-in-out;
 }
 
 
