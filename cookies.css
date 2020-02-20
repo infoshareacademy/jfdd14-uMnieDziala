@@ -30,7 +30,6 @@
     }
     
     @media (min-width: 768px) {
-        .cookie {}
         .cookie__container--p {
             font-size: 17px;
         }
