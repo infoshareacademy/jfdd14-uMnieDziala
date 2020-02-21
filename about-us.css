@@ -134,6 +134,7 @@
 @media (min-width: 1025px) {
      .about-us_title {
         font-size: 1.8rem;
+        margin-bottom: 7rem;
     }
 
     .about-wrap {
@@ -144,5 +145,9 @@
     .about__pair {
         flex-basis: 25%;
     }
-}
+
+    .animation__container {
+        width: 180px;
+        height: 180px; 
+    } }
  
