@@ -54,6 +54,10 @@
 
 /* rotation */
 
+.about__icons.animation-back a {
+    z-index: 9;
+}
+
 .animation__container {
     background-color: transparent;
     width: 150px;
@@ -97,14 +101,15 @@
     justify-content: center;
 }
 
+
 /* on scroll animation
  */
 
  .pictures-animation {
     animation-name: pictures-animation;
-    animation-duration:7s;
-    animation-delay:2.5s;
-    transition: transform 2s;
+    animation-duration:2s;
+    animation-delay:0.5s;
+    transition: transform 0.7s;
     transform-style: preserve-3d;
     animation-timing-function:ease-in-out;
 }
