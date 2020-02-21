@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="details.css">
     <link rel="stylesheet" type="text/css" href="invitation.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="cookies.css">
     <link rel="shortcut icon" href="img/favicon_package_v0.16 (4)/favicon-16x16.png" type="image/x-icon">
     <link rel="icon" href="img/favicon_package_v0.16 (4)/favicon-16x16.png" type="image/x-icon">
 
@@ -22,7 +23,6 @@
 
 <body>
     <div class="content">
-
         <header class="header">
             <div class="header__menu">
                 <a href="#top" class="header__logo">
@@ -50,29 +50,24 @@
             </div>
             <button id="rightArrow" class="hero__arrow"><i class="fas fa-chevron-right"></i></button>
         </section>
-
         <section id="functions" class="functions">
             <div class="functions__box">
                 <i class="fas fa-clipboard-list"></i>
                 <h2 class="functions__title">Stwórz plan wyjazdu</h2>
             </div>
-
             <div class="functions__box">
                 <i class="fas fa-route"></i>
                 <h2 class="functions__title">Odkryj nowe miejsca</h2>
             </div>
-
             <div class="functions__box">
                 <i class="fas fa-laugh"></i>
                 <h2 class="functions__title">Spersonalizuj swój wypoczynek</h2>
             </div>
-
             <div class="functions__box">
                 <i class="fas fa-users"></i>
                 <h2 class="functions__title">Dziel się wrażeniami</h2>
             </div>
         </section>
-
         <section id="details" class="details">
             <div class="details__box">
                 <i class="fas fa-clipboard-list"></i>
@@ -107,18 +102,16 @@
                 <p class="details__text">Łatwo przejrzysz wybrane miejsca na mapach i zaplanujesz trasę</p>
             </div>
         </section>
-
         <section id="sign-up" class="sign-up">
             <h3 class="sign-up__title">
                 Chcesz zwiedzić z nami Trójmiasto? <br>Zostaw nam maila a poinformujemy Cię, gdy pojawią się nowe funkcje.
             </h3>
             <form class="sign-up__form">
-                <input class="form__input" type="email" name="input" placeholder="Tu wpisz maila" required value="" >
+                <input class="form__input" type="email" name="input" placeholder="Tu wpisz maila" required value="">
                 <input class="form__button" type="submit" value="ok">
             </form>
             <p class="form__info">Na podany adres zostanie wysłany tylko jeden email. Twoje dane są z nami bezpieczne.</p>
         </section>
-
         <section id="about" class="about">
             <h2 class="about-us_title">O twórcach aplikacji</h2>
             <div class="about-wrap">
@@ -147,8 +140,7 @@
                         <a href="https://zazulec.github.io/Pawel-Zarzycki/" target="blank"><i class="about__icon fas fa-link"></i></a>
                     </div>
                     <p class="about__text">
-                        Po ośmiu latach w logistyce podjął decyzję o zmianie branży na IT. 
-                        Obecnie programuje w językach Html 5, Css 3, JavaScript.
+                        Po ośmiu latach w logistyce podjął decyzję o zmianie branży na IT. Obecnie programuje w językach Html 5, Css 3, JavaScript.
                     </p>
                 </div>
                 <div class="about__pair">
@@ -181,15 +173,25 @@
                 </div>
             </div>
         </section>
-
         <footer class="footer">
             <p class="footer__text">&copy; 2020 uMnieDziała</p>
             <p class="footer__small-text">All Rights Reserved</p>
         </footer>
-
     </div>
+<<<<<<< HEAD
     <script src="hero.js"></script>
+=======
+    <section id="cookie" class="cookie">
+        <div class="cookie__container">
+            <p class='cookie__container--p'>
+                Używamy plików cookie, aby zrozumieć, w jaki sposób korzystasz z naszej witryny i aby poprawić Twoje wrażenia. Obejmuje to personalizowanie treści i reklam.
+            </p>
+            <button class="cookie__container--button" onclick="cookieSaveToLocalStorage()">OK</button>
+        </div>
+    </section>
+>>>>>>> cbe34221e1948c8f0905a8cc233c59a19e7e24f3
     <script src="scripts/form.js"></script>
+    <script src="scripts/cookie.js"></script>
 </body>
 
 </html>
