@@ -39,5 +39,5 @@ body {
 }
 
 .active {
-    color: red;
+    color: var(--color-blue)
 }

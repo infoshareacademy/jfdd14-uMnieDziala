@@ -43,7 +43,7 @@
 }
 
 .active {
-    color: red;
+    color: var(--color-blue)
 }
 
 @media (max-width: 899px){
