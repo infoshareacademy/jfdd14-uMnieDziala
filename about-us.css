@@ -81,7 +81,7 @@
 
 .animation-front, .animation-back {
     position: absolute;
-    /* backface-visibility: hidden; */
+    backface-visibility: hidden;
 }
 
 .animation-front{
@@ -115,8 +115,16 @@
 }
 
  @keyframes pictures-animation {
-    0% { transform:rotateY(0deg); }
-    100% { transform:rotateY(360deg); 
+    0% { 
+        transform:rotateY(0deg);
+        backface-visibility: visible;
+    }
+    99% {
+        backface-visibility: visible;
+    }
+    100% { 
+        transform:rotateY(360deg);
+        backface-visibility: hidden; 
  }
 }
 
