@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="invitation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" type="text/css" href="cookies.css">
+    <link rel="stylesheet" type="text/css" href="calculator.css">
     <link rel="shortcut icon" href="img/favicon_package_v0.16 (4)/favicon-16x16.png" type="image/x-icon">
     <link rel="icon" href="img/favicon_package_v0.16 (4)/favicon-16x16.png" type="image/x-icon">
 
@@ -98,14 +99,25 @@
             </div>
         </section>
         <section id="calculator" class=" calculator">
-            <div class="calculator__popup" onclick="openPopupWindow()">
-                Kliknij, zeby otworzyć popup!
-                <span id="ID__popup--textIn" class="calculator__popup--textIn">
-                    A Simple Popup!
-                </span>
+            <div class="calculator__modal">
+                <h2>Kalulator cen</h2>
+                <button type='button' class="calculator__modal--button">
+                    Wylicz swoją cenę
+                </button>
+                <dialog open class="calculator__dialog">
+                    <form method="dialog" class="calculator__dialog--content">
+                        <p><label>Oblicz swoją znizkę</label></p>
+                        <input type='range' min='0' max='12'>
+                        <menu>
+                            <button type='button' value='Potwiedź'>Potwierdź</button>
+                            <button type='button' value='wyjdź'>Wyjdź</button>
+
+                        </menu>
+                    </form>
+                </dialog>
+
+
             </div>
-
-
         </section>
 
         <section id="sign-up " class="sign-up ">
