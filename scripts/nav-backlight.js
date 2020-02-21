@@ -32,7 +32,7 @@ for (let i = 0; i < nav_button.length; i++) {
   window.addEventListener("scroll" ,function() {
     const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
     for (let i in sections) {
-      if (sections[i] <= scrollPosition) {
+      if (sections[i] <= scrollPosition+100) {
         document.querySelector('.active').classList.remove("active");
         document.querySelector('a[href*=' + i + ']').classList.add('active');      
       }
