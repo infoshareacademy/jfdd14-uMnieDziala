@@ -16,7 +16,6 @@ const changeHeroImageToPrevious = function () {
 
 let autoImageChanging;
 
-
 const startAutoImageChanging = function () {
     clearInterval(autoImageChanging);
     autoImageChanging = setInterval(changeHeroImage, 3000);
