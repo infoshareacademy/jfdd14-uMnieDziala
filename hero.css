@@ -21,11 +21,11 @@ header {
     transition: background-image 1s ease-in-out;
 }
 .hero--image2 {
-    background-image: url("img/banner-city.jpg");
+    background-image: url("img/banner-gdansk.jpg");
     transition: background-image 1s ease-in-out;
 }
 .hero--image3 {
-    background-image: url("img/banner-sunglasses.jpg");
+    background-image: url("img/banner-sand.jpg");
     transition: background-image 1s ease-in-out;
 }
 
@@ -48,17 +48,18 @@ header {
     cursor: pointer;
 }
 .hero__arrow:hover {
-    color: var(--color-light-blue);
+    color: var(--color-white);
 }
 .hero__arrow:focus {
     outline: none;
 }
 
 .hero__title {
-    color: var(--color-light-blue);
+    color: var(--color-white);
     font-size: 7vw;
     text-align: center;
     font-family: 'Comfortaa', cursive;
+    text-shadow: 1px 1px 3px #000, 0px 0px 5px #000;
 }
 
 .hero__bottom-box {
@@ -69,24 +70,24 @@ header {
 }
 
 .hero__secondary-title {
-    color: var(--color-light-blue);
+    color: var(--color-white);
     font-size: 5vw;
     padding: 20px 5px;
     font-weight: normal;
-    text-shadow: 2px 2px 3px var(--color-dark);
+    text-shadow: 1px 1px 2px #000, 1px 1px 3px #000, 0px 0px 5px #000, 0px 0px 5px #000, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px #000;
 }
 
 .hero__button {
     display: inline-block;
     width: fit-content;
     text-decoration: none;
-    color: var(--color-light-blue);
-    background: rgba(255, 255, 255, 0.2);
+    color: var(--color-white);
+    background: var(--color-blue);
     padding: 15px;
-    border: 3px solid var(--color-light-blue);
+    border: 3px solid var(--color-white);
     border-radius: 30px;
     font-size: 5vw;
-    text-shadow: 2px 2px 3px var(--color-dark);
+    text-shadow: 1px 1px 3px #000, 0px 0px 5px #000, 0px 0px 10px #000;
 }
 
 @media (max-width: 360px) {
@@ -94,7 +95,7 @@ header {
         font-size: 25px;
     }
     .hero__secondary-title {
-        font-size: 18px;
+        font-size: 20px;
     }
     .hero__button {
         font-size: 18px;
