@@ -107,7 +107,14 @@
                 <dialog open class="calculator__dialog">
                     <form method="dialog" class="calculator__dialog--content">
                         <label class="calculator__dialog--label">Oblicz swoją znizkę</label>
-                        <input class="calculator__dialog--input" type='range' min='0' max='12'>
+                        <input class="calculator__dialog--input" type='range' min='0' max='3' step='1' list='ticks2'>
+                        <datalist id='ticks2'>
+                            <option value="0">0 m/c</option>
+                            <option value="3">3 m/c</option>
+                            <option value="6">6 m/c</option>
+                            <option value="12">12 m/c</option>
+                          </datalist>
+                        <output></output>
                         <menu class="calculator__dialog--menu">
                             <button class="calculator__dialog--button" type="button" value="Potwiedź">Potwierdź</button>
                             <button class="calculator__dialog--button" type="button" value="wyjdź">Wyjdź</button>
