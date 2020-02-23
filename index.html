@@ -106,11 +106,11 @@
                 </button>
                 <dialog open class="calculator__dialog">
                     <form method="dialog" class="calculator__dialog--content">
-                        <p><label>Oblicz swoją znizkę</label></p>
-                        <input type='range' min='0' max='12'>
-                        <menu>
-                            <button type='button' value='Potwiedź'>Potwierdź</button>
-                            <button type='button' value='wyjdź'>Wyjdź</button>
+                        <label class="calculator__dialog--label">Oblicz swoją znizkę</label>
+                        <input class="calculator__dialog--input" type='range' min='0' max='12'>
+                        <menu class="calculator__dialog--menu">
+                            <button class="calculator__dialog--button" type="button" value="Potwiedź">Potwierdź</button>
+                            <button class="calculator__dialog--button" type="button" value="wyjdź">Wyjdź</button>
 
                         </menu>
                     </form>
@@ -201,7 +201,7 @@
     <section id="cookie" class="cookie">
         <div class="cookie__container ">
 
-            <p class='cookie__container--p'>
+            <p class='cookie__container--p '>
                 Używamy plików cookie, aby zrozumieć, w jaki sposób korzystasz z naszej witryny i aby poprawić Twoje wrażenia. Obejmuje to personalizowanie treści i reklam.
             </p>
             <button class="cookie__container--button " onclick="cookieSaveToLocalStorage() ">OK</button>

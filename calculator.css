@@ -1,3 +1,8 @@
+    .calculator {
+        display: flex;
+        align-content: center;
+    }
+    
     .calculator__modal {
         display: flex;
         justify-content: center;
@@ -16,6 +21,41 @@
     }
     
     .calculator__dialog--content {
+        background-color: var(--color-light-blue);
         display: grid;
         width: 100%;
+    }
+    
+    .calculator__dialog--label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .calculator__dialog--input {
+        cursor: pointer;
+        width: 60%;
+        justify-self: center;
+    }
+    
+    button {
+        cursor: pointer;
+        border: transparent;
+        outline: none
+    }
+    
+    .calculator__dialog--menu {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .calculator__dialog--button {
+        height: 3rem;
+        min-width: 6rem;
+        color: var(--color-light-blue);
+        background-color: var(--color-blue);
+        border: none;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
