@@ -9,7 +9,6 @@
 
   window.addEventListener("scroll", function () {
     const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-    const 
     for (let i in sections) {
       if (sections[i] <= scrollPosition + 40) {
         document.querySelector('.active').classList.remove("active");

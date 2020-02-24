@@ -37,7 +37,3 @@ body {
     margin: 0 auto;
     background: #fff;
 }
-
-.active {
-    color: var(--color-blue)
-}
