@@ -10,7 +10,7 @@
   window.addEventListener("scroll", function () {
     const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
     for (let i in sections) {
-      if (sections[i] <= scrollPosition + 40) {
+      if (sections[i] <= scrollPosition +40) {
         document.querySelector('.active').classList.remove("active");
         document.querySelector('a[href*=' + i + ']').classList.add('active');
       if (i === "hero") {
