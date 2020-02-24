@@ -1,0 +1,39 @@
+/*VAR*/
+
+:root {
+    --color-dark: rgb(29, 29, 29);
+    --color-white: #fff;
+    --color-light-blue: rgb(208, 226, 236);
+    --color-blue: #3A515F;
+    --color-grey: rgb(163, 163, 163);
+}
+
+
+/*STYLES*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.content {
+    position: relative;
+    padding-top: 70px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 2000px;
+    margin: 0 auto;
+    background: #fff;
+}
