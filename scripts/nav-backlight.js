@@ -1,4 +1,4 @@
-(function () {
+/*(function () {
 
   const sectionsEl = document.querySelectorAll("section");
   const sections = {};
@@ -21,7 +21,7 @@
       }
     }
   });
-})();
+})();*/
 
 
 
