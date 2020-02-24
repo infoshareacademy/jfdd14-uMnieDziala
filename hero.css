@@ -91,10 +91,10 @@ header {
 }
 
 .active {
-    color: var(--color-blue)
+    color: var(--color-blue) !important;
 }
 
-/@media (max-width: 360px){
+@media (max-width: 360px){
     .hero__title{
         font-size: 25px;
     }
