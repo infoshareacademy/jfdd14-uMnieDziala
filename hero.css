@@ -1,8 +1,8 @@
-header{
+header {
     background: #000;
 }
 
-.hero{
+.hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,21 +16,20 @@ header{
     height: 540px;
     padding: 20px 0;
 }
-.hero--image1{
+.hero--image1 {
     background-image: url("img/banner3-1600.jpg");
     transition: background-image 1s ease-in-out;
 }
-.hero--image2{
+.hero--image2 {
     background-image: url("img/banner-gdansk.jpg");
     transition: background-image 1s ease-in-out;
 }
-.hero--image3{
+.hero--image3 {
     background-image: url("img/banner-sand.jpg");
     transition: background-image 1s ease-in-out;
 }
 
-
-.hero__main{
+.hero__main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +38,7 @@ header{
     height: 100%;
 }
 
-.hero__arrow{
+.hero__arrow {
     height: 100%;
     padding: 10px;
     font-size: 40px;
@@ -48,15 +47,14 @@ header{
     background: none;
     cursor: pointer;
 }
-
-.hero__arrow:hover{
+.hero__arrow:hover {
     color: var(--color-white);
 }
 .hero__arrow:focus {
     outline: none;
 }
 
-.hero__title{
+.hero__title {
     color: var(--color-white);
     font-size: 7vw;
     text-align: center;
@@ -64,14 +62,14 @@ header{
     text-shadow: 1px 1px 3px #000, 0px 0px 5px #000;
 }
 
-.hero__bottom-box{
+.hero__bottom-box {
     max-width: 500px;
     padding: 20px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
 
-.hero__secondary-title{
+.hero__secondary-title {
     color: var(--color-white);
     font-size: 5vw;
     padding: 20px 5px;
@@ -79,7 +77,7 @@ header{
     text-shadow: 1px 1px 2px #000, 1px 1px 3px #000, 0px 0px 5px #000, 0px 0px 5px #000, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px #000;
 }
 
-.hero__button{
+.hero__button {
     display: inline-block;
     width: fit-content;
     text-decoration: none;
@@ -92,46 +90,45 @@ header{
     text-shadow: 1px 1px 3px #000, 0px 0px 5px #000, 0px 0px 10px #000;
 }
 
-
-@media (max-width: 360px){
+@media (max-width: 360px) {
     .hero__title{
         font-size: 25px;
     }
-    .hero__secondary-title{
+    .hero__secondary-title {
         font-size: 20px;
     }
-    .hero__button{
+    .hero__button {
         font-size: 18px;
     }
 }
 
-@media (min-width: 500px){
-    .hero__title{
+@media (min-width: 500px) {
+    .hero__title {
         font-size: 36px;
     }
-    .hero__secondary-title{
+    .hero__secondary-title {
         font-size: 24px;
     }
-    .hero__button{
+    .hero__button {
         font-size: 28px;
     }
 }
 
-@media (min-width: 1200px){
-    .hero{
+@media (min-width: 1200px) {
+    .hero {
         align-items: initial;
     }
-    .hero__bottom-box{
+    .hero__bottom-box {
         align-self: flex-end;
         text-align: right;
     }
-    .hero__secondary-title{
+    .hero__secondary-title {
         font-size: 28px;
     }
 }
 
-@media (min-width: 1400px){
-    .hero{
+@media (min-width: 1400px) {
+    .hero {
         height: 640px;
     }
 }
