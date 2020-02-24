@@ -5,13 +5,15 @@ const heroTitle = document.querySelector(".hero__title");
 
 let imageCounter = 1;
 const changeHeroImage = function () {
+    heroSection.classList.remove(`hero--image${imageCounter}`);
     imageCounter < 3 ? imageCounter++ : imageCounter = 1;
-    heroSection.classList = `hero hero--image${imageCounter}`;
+    heroSection.classList.add(`hero--image${imageCounter}`);
 };
 
 const changeHeroImageToPrevious = function () {
+    heroSection.classList.remove(`hero--image${imageCounter}`);
     imageCounter === 1 ? imageCounter = 3 : imageCounter--;
-    heroSection.classList = `hero hero--image${imageCounter}`;
+    heroSection.classList.add(`hero--image${imageCounter}`);
 };
 
 let autoImageChanging;
