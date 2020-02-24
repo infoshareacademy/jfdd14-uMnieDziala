@@ -4,8 +4,7 @@
 
     width: 100%;
     max-width: 1300px;
-    padding-top: 70px;
-    padding-bottom: 30px;
+    padding: 70px 0 30px;
     margin: 0 auto;
 }
 
@@ -17,23 +16,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px 10px;
 }
 
 .details .fas, .far{
     color: var(--color-blue);
-    width: 25%;
     font-size: 2.5rem;
     text-align: center;
-    padding: 20px;
+    padding: 0px 20px;
 }
 
 .details__text{
     color: var(--color-dark);
-    padding: 20px;
-    width: 70%;
+    padding: 10px 30px 10px 10px;
     max-width: 400px;
-    text-align: center;
+    text-align: left;
     font-size: 1.3rem;
 }
 
