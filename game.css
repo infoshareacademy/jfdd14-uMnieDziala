@@ -1,0 +1,24 @@
+body {
+    background: var(--color-light-blue);
+    background-image: url("img/background-sea.jpg");
+}
+
+main {
+    width: 650px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+h1 {
+    padding: 30px;
+    font-family: Comfortaa;
+    text-align: center;
+    color: var(--color-white);
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    background: transparent;
+    border: 5px solid var(--color-white);
+}
