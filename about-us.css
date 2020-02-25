@@ -131,7 +131,7 @@
 
 /* 1024px for iPad Pro */
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
      .about-us_title {
         font-size: 1.8rem;
         margin-bottom: 7rem;
