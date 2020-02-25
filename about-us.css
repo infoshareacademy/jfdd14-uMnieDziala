@@ -91,7 +91,7 @@
 }
 
 .animation-back{
-    background-color: var(--color-grey);
+    background-color: var(--color-blue);
     border-radius: 50%;
     transform: rotateY(180deg);
     width: 100%;
@@ -134,7 +134,11 @@
 @media (min-width: 1024px) {
      .about-us_title {
         font-size: 1.8rem;
-        margin-bottom: 7rem;
+        margin-bottom: 5rem;
+    }
+
+    .about__name {
+        font-size: 1.4rem;
     }
 
     .about-wrap {
