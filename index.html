@@ -100,7 +100,7 @@
         </section>
         <section id="calculator" class=" calculator">
             <div class='calculator__info'>
-                <h2 class='calculator__h2'> Kalkulator znizek</h2>
+                <h2 class='calculator__h2'>Im dłuzej jesteś z nami, tym płacisz mniej za subskrypcję.</h2>
                 <button id='openButton' type='button' class="calculator__modal--button">
                     <h4>Wylicz swoją zniżkę</h4>
                 </button>
@@ -108,25 +108,28 @@
             <dialog open id='calculator__dialog' class="calculator__dialog">
                 <form method="dialog" class="calculator__dialog--content">
                     <label class="calculator__dialog--label">Oblicz swoją zniżkę!</label>
-                    <div>
-                        <input oninput='checkSliderPosition()' id='calculator__dialog--input' class="calculator__dialog--input" type='range' min='0' max='3' step='1' list='ticks2' value='0'>
-                        <datalist id='ticks2'>
-                            <option class ='value0' value="" label='0 m/c'>0 m/c</option>
-                            <option class ='value3' value="" label='3 m/c'>3 m/c</option>
-                            <option class ='value6' value="" label='6 m/c'>6 m/c</option>
-                            <option class ='value12' value="" label='12 m/c'>12 m/c</option>
-                          </datalist>
-                        <input type="checkbox" id='calculator__dialog--checkbox'>
+                    <div class='calculator__slidecontainer'>
+                        <input oninput='checkSliderPosition()' id='calculator__dialog--input' class="calculator__dialog--input" type='range' min='0' max='3' step='1' list='calculator__dialog--tickmarsk' value='0'>
+                        <div class='calculator__dialog--tickmarsk'>
+                            <p>0 m/c</p>
+                            <p>3 m/c</p>
+                            <p>6 m/c</p>
+                            <p>12 m/c</p>
+                        </div>
+
                     </div>
                     <output class="calculator__dialog--output">
                             <div class='priceWithoutDiscount'>cena podstawowa
-                                <p id='calculator__textNormalPrice'class='textNormalPrice'>cena w zł</p>
+                                <p id='calculator__textNormalPrice'class='textNormalPrice'></p>
                             </div>
                             <div class='priceWithDiscount'>cena po zniżce
-                                <p id='calculator__textDiscountPrice'class='textDiscountPrice'>cena2 w zł</p>
-                                
+                                <p id='calculator__textDiscountPrice'class='textDiscountPrice'></p>
                             </div>
+                            
                         </output>
+                    <div class="calculator__checkbox">
+                        <label class="calculator__checkbox--label">emeryci / studenci +5% zniżki <input type="checkbox" id='calculator__dialog--checkbox' class='calculator__dialog--checkbox'></label>
+                    </div>
                     <menu class="calculator__dialog--menu">
                         <button id='calculator__dialog--buttonAccept' class="calculator__dialog--button" type="button" value="Potwiedź">Potwierdź</button>
                         <button id='calculator__dialog--buttonExit' class="calculator__dialog--button" type="button" value="wyjdź">Wyjdź</button>
@@ -138,7 +141,6 @@
 
     </div>
     </section>
-
     <section id="sign-up " class="sign-up ">
         <h3 class="sign-up__title ">
             Chcesz zwiedzić z nami Trójmiasto? <br>Zostaw nam maila a poinformujemy Cię, gdy pojawią się nowe funkcje.
