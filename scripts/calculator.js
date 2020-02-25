@@ -23,25 +23,25 @@ function closeCalculatorWindow() {
 function checkSliderPosition() {
     let sliderValue = slider.value;
     calculatePrice();
-    console.log(sliderValue);
+
 };
 
 function calculatePrice() {
     if (slider.value === '0') {
-        normalPriceParagraph.innerText = basePrice;
-        discountPriceParagraph.innerText = basePrice;
+        normalPriceParagraph.innerText = basePrice + ' zł';
+        discountPriceParagraph.innerText = basePrice + ' zł';
     } else if (slider.value === '1') {
-        normalPriceParagraph.innerText = basePrice * 3;
-        discountPriceParagraph.innerText = getDiscountedPrice(3, 0.95);
+        normalPriceParagraph.innerText = basePrice * 3 + ' zł';
+        discountPriceParagraph.innerText = getDiscountedPrice(3, 0.95) + ' zł';
     } else if (slider.value === '2') {
-        normalPriceParagraph.innerText = basePrice * 6;
-        discountPriceParagraph.innerText = getDiscountedPrice(6, 0.9);
+        normalPriceParagraph.innerText = basePrice * 6 + ' zł';
+        discountPriceParagraph.innerText = getDiscountedPrice(6, 0.9) + ' zł';
     } else if (slider.value === '3') {
-        normalPriceParagraph.innerText = basePrice * 12;
-        discountPriceParagraph.innerText = getDiscountedPrice(12, 0.8);
+        normalPriceParagraph.innerText = basePrice * 12 + ' zł';
+        discountPriceParagraph.innerText = getDiscountedPrice(12, 0.8) + ' zł';
 
     }
-    console.log(checkbox);
+
 };
 
 function getDiscountedPrice(month, discount) {
