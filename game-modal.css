@@ -1,0 +1,7 @@
+.game-modal {
+    height: 100vh;
+    max-width: 100%;
+    z-index: 5;
+    position: fixed;
+    background-color: aquamarine;
+}
