@@ -137,6 +137,14 @@ button {
     justify-content: center;
 }
 
+.priceWithoutDiscount {
+    font-weight: bolder;
+}
+
+.priceWithDiscount {
+    font-weight: bolder;
+}
+
 @media (max-width: 800px) {
     .calculator__h2 {
         display: flex;
