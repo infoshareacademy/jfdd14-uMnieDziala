@@ -49,10 +49,9 @@ function moving () {
             el.create();
             el.update();
         } )
+
     }, 700 );
 }
-
-
 
 startButton.addEventListener("click", () => {
     clearInterval(startGame);
