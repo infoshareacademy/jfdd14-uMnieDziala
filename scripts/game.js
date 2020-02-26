@@ -4,6 +4,17 @@ const scale = 50;
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 
+// function Swimmer() {
+//     this.x = 0;
+//     this.y = 0;
+//     this.xSpeed = scale * 1;
+//     this.ySpeed = 0;
+
+//     this.draw = function() {
+//         ctx.fillStyle = "#FFFFFF";
+//         ctx.fillRect(this.x, this.y, scale, scale);
+//   }
+
 class Enemy {
     constructor () {
         this.create();
