@@ -10,7 +10,7 @@ class Enemy {
     }
     width = scale;
     height = scale;
-    color = "white";
+    color = ctx.createPattern(document.getElementById("seagull"), "repeat");
     x = (Math.floor(Math.random()*columns - 1) + 1)*scale;
     y = 0;
     velY = scale;

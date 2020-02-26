@@ -1,6 +1,17 @@
 body {
     background: var(--color-light-blue);
     background-image: url("img/background-sea.jpg");
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 main {
@@ -10,10 +21,9 @@ main {
 }
 
 h1 {
-    padding: 30px;
     font-family: Comfortaa;
-    text-align: center;
     color: var(--color-white);
+    margin-top: 15px;
 }
 
 canvas {
@@ -21,4 +31,10 @@ canvas {
     margin: 0 auto;
     background: transparent;
     border: 5px solid var(--color-white);
+}
+
+#seagull {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
 }
