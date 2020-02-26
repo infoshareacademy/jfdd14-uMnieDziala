@@ -8,4 +8,5 @@ function closeModal(){
 
 
 
-btnQuit.addEventListener('click', closeModal)
+btnQuit.addEventListener('click', closeModal);
+btnPlay.addEventListener('click', closeModal)
