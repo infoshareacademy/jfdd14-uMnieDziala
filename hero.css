@@ -90,7 +90,11 @@ header {
     text-shadow: 1px 1px 3px #000, 0px 0px 5px #000, 0px 0px 10px #000;
 }
 
-@media (max-width: 360px) {
+.active {
+    color: var(--color-blue);
+}
+
+@media (max-width: 360px){
     .hero__title{
         font-size: 25px;
     }
