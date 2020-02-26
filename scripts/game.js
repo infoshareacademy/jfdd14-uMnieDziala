@@ -29,7 +29,13 @@ function newEnemies () {
     window.setInterval ( () => {
         enemies.push(new Enemy);
         enemies.push(new Enemy);
-    }, 3000 );
+        if( enemies.length > 20 ){
+            enemies.push(new Enemy);
+        }
+        if( enemies.length > 40 ){
+            enemies.push(new Enemy);
+        }
+    }, 2800 );
 }
 
 function moving () {
@@ -39,7 +45,7 @@ function moving () {
             el.create();
             el.update();
         } )
-    }, 1000 );
+    }, 700 );
 }
 
 newEnemies();
