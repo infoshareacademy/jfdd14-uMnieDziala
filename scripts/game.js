@@ -89,17 +89,33 @@ startButton.addEventListener("click", () => {
 });
 
 window.addEventListener('keydown', function (event) {
+    event.preventDefault();
     if (event.key === "ArrowLeft") {
-        swimmer.velY = 0;
+        // swimmer.velY = 0;
         swimmer.velX = (scale * -1) / 4;
-    } else if (event.key === "ArrowRight") {
-        swimmer.velY = 0;
+    }
+    if (event.key === "ArrowRight") {
+        // swimmer.velY = 0;
         swimmer.velX = (scale * 1) / 4;
-    } else if (event.key === "ArrowUp") {
-        swimmer.velX = 0;
+    }
+    if (event.key === "ArrowUp") {
+        // swimmer.velX = 0;
         swimmer.velY = (scale * -1) / 4;
-    } else if (event.key === "ArrowDown") {
-        swimmer.velX = 0;
+    }
+    if (event.key === "ArrowDown") {
+        // swimmer.velX = 0;
         swimmer.velY = (scale * 1) / 4;
+    }
+})
+window.addEventListener('keyup', function (event) {
+    event.preventDefault();
+    if (event.key === "ArrowLeft") {
+        swimmer.velX = 0;
+    } else if (event.key === "ArrowRight") {
+        swimmer.velX = 0;
+    } else if (event.key === "ArrowUp") {
+        swimmer.velY = 0;
+    } else if (event.key === "ArrowDown") {
+        swimmer.velY = 0;
     }
 })
