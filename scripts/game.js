@@ -11,10 +11,10 @@ class Enemy {
     }
     width = scale;
     height = scale;
-    color = ctx.createPattern(document.getElementById("seagull"), "repeat");
+    color = "white";
     x = (Math.floor(Math.random()*columns - 1) + 1)*scale;
     y = 0;
-    velY = scale;
+    velY = scale/8;
     create = () => {
         ctx.fillStyle = this.color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -38,7 +38,7 @@ function newEnemies () {
         if( enemies.length > 40 ){
             enemies.push(new Enemy);
         }
-    }, 2800 );
+    }, 2000 );
 }
 
 function moving () {
@@ -50,7 +50,7 @@ function moving () {
             el.update();
         } )
 
-    }, 700 );
+    }, 100 );
 }
 
 startButton.addEventListener("click", () => {
