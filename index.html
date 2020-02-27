@@ -22,6 +22,7 @@
 </head>
 
 <body>
+
     <div class="content">
         <header class="header">
             <div class="header__menu">
@@ -97,26 +98,28 @@
                 <p class="details__text">Łatwo przejrzysz wybrane miejsca na mapach i zaplanujesz trasę</p>
             </div>
         </section>
-        <section id="calculator" class=" calculator">
+        <section id="calculator" class="calculator">
             <div class='calculator__info'>
                 <h2 class='calculator__h2'>Im dłuzej jesteś z nami, tym płacisz mniej za subskrypcję.</h2>
                 <button id='openButton' type='button' class="calculator__modal--button">
                     <h4>Wylicz swoją zniżkę</h4>
                 </button>
             </div>
-            <dialog open id='calculator__dialog' class="calculator__dialog">
-                <form method="dialog" class="calculator__dialog--content">
-                    <label class="calculator__dialog--label">Oblicz swoją zniżkę!</label>
-                    <div class='calculator__slidecontainer'>
-                        <input oninput='checkSliderPosition()' id='calculator__dialog--input' class="calculator__dialog--input" type='range' min='0' max='3' step='1' list='calculator__dialog--tickmarsk' value='0'>
-                        <div class='calculator__dialog--tickmarsk'>
-                            <p>0 m/c</p>
-                            <p>3 m/c</p>
-                            <p>6 m/c</p>
-                            <p>12 m/c</p>
+            <div class='test'>
+                <dialog open id='calculator__dialog' class="calculator__dialog">
+                    <form method="dialog" class="calculator__dialog--content">
+                        <label class="calculator__dialog--label">Oblicz swoją zniżkę!</label>
+                        <div class='calculator__slidecontainer'>
+
+                            <input oninput='checkSliderPosition()' id='calculator__dialog--input' class="calculator__dialog--input" type='range' min='0' max='3' step='1' list='calculator__dialog--tickmarsk' value='0'>
+                            <div class='calculator__dialog--tickmarsk'>
+                                <p>0 m/c</p>
+                                <p>3 m/c</p>
+                                <p>6 m/c</p>
+                                <p>12 m/c</p>
+                            </div>
                         </div>
-                    </div>
-                    <output class="calculator__dialog--output">
+                        <output class="calculator__dialog--output">
                             <div class='priceWithoutDiscount'>cena podstawowa
                                 <p id='calculator__textNormalPrice'class='textNormalPrice'></p>
                             </div>
@@ -124,16 +127,17 @@
                                 <p id='calculator__textDiscountPrice'class='textDiscountPrice'></p>
                             </div>
                         </output>
-                    <div class="calculator__checkbox">
-                        <label class="calculator__checkbox--label">emeryci / studenci +5% zniżki <input type="checkbox" id='calculator__dialog--checkbox' class='calculator__dialog--checkbox'></label>
-                    </div>
-                    <menu class="calculator__dialog--menu">
-                        <button id='calculator__dialog--buttonAccept' class="calculator__dialog--button" type="button" value="Potwiedź">Potwierdź</button>
-                        <button id='calculator__dialog--buttonExit' class="calculator__dialog--button" type="button" value="wyjdź">Wyjdź</button>
-                    </menu>
-                </form>
-            </dialog>
-    </div>
+                        <div class="calculator__checkbox">
+                            <label class="calculator__checkbox--label">emeryci / studenci +5% zniżki <input type="checkbox" id='calculator__dialog--checkbox' class='calculator__dialog--checkbox'></label>
+                        </div>
+                        <menu class="calculator__dialog--menu">
+                            <button id='calculator__dialog--buttonAccept' class="calculator__dialog--button" type="button" value="Potwiedź">Potwierdź</button>
+                            <button id='calculator__dialog--buttonExit' class="calculator__dialog--button" type="button" value="wyjdź">Wyjdź</button>
+                        </menu>
+                    </form>
+                </dialog>
+            </div>
+    </div class='calculator__proto'>
     </section>
     <section id="sign-up " class="sign-up ">
         <h3 class="sign-up__title ">

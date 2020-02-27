@@ -2,22 +2,31 @@ const slider = document.getElementById('calculator__dialog--input');
 const openBtn = document.getElementById('openButton');
 const discountPriceParagraph = document.getElementById('calculator__textDiscountPrice');
 const normalPriceParagraph = document.getElementById('calculator__textNormalPrice'); //tak
+const calctulatorProtoWindow = document.querySelector('.calculator__proto') // nie
 const calculatorWindow = document.getElementById('calculator__dialog'); // tak
 const menuBtnExt = document.getElementById('calculator__dialog--buttonExit') // tak
 const checkbox = document.getElementById('calculator__dialog--checkbox');
+const calculatorOpacity = document.querySelector('.test');
 const basePrice = 30;
 
 
-openBtn.addEventListener('click', openCalculatorWindow);
+openBtn.addEventListener('click', opencalculatorWindow);
 menuBtnExt.addEventListener('click', closeCalculatorWindow);
 checkbox.addEventListener('click', calculatePrice);
 
-function openCalculatorWindow() {
+
+function opencalculatorWindow() {
     calculatorWindow.style.display = 'flex';
+    calculatorOpacity.style.display = 'flex';
+
+
+
 };
 
 function closeCalculatorWindow() {
     calculatorWindow.style.display = 'none';
+    calculatorOpacity.style.display = 'none';
+
 };
 
 function checkSliderPosition() {
