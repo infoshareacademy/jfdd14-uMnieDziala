@@ -3,6 +3,7 @@ const ctx = canvas.getContext("2d");
 const scale = 50;
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
+const startButton = document.querySelector("button");
 
 class Enemy {
     constructor () {
@@ -23,24 +24,40 @@ class Enemy {
     };
 }
 
-const enemies = [];
+let enemies = [];
+let startGame;
+let moveEnemies;
 
 function newEnemies () {
-    window.setInterval ( () => {
+    startGame = setInterval ( () => {
         enemies.push(new Enemy);
         enemies.push(new Enemy);
-    }, 3000 );
+        if( enemies.length > 20 ){
+            enemies.push(new Enemy);
+        }
+        if( enemies.length > 40 ){
+            enemies.push(new Enemy);
+        }
+    }, 2800 );
 }
 
 function moving () {
-    window.setInterval ( () => {
+    moveEnemies = setInterval ( () => {
+        console.log(enemies);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         enemies.forEach( el => {
             el.create();
             el.update();
         } )
-    }, 1000 );
+
+    }, 700 );
 }
 
-newEnemies();
-moving();
+startButton.addEventListener("click", () => {
+    clearInterval(startGame);
+    clearInterval(moveEnemies);
+    enemies = [];
+    enemies.push(new Enemy);
+    newEnemies();
+    moving();
+} );
