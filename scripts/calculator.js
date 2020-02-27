@@ -2,11 +2,10 @@ const slider = document.getElementById('calculator__dialog--input');
 const openBtn = document.getElementById('openButton');
 const discountPriceParagraph = document.getElementById('calculator__textDiscountPrice');
 const normalPriceParagraph = document.getElementById('calculator__textNormalPrice'); //tak
-const calctulatorProtoWindow = document.querySelector('.calculator__proto') // nie
 const calculatorWindow = document.getElementById('calculator__dialog'); // tak
+const calculatorModal = document.querySelector('.calculator__dialog--modalBox');
 const menuBtnExt = document.getElementById('calculator__dialog--buttonExit') // tak
 const checkbox = document.getElementById('calculator__dialog--checkbox');
-const calculatorOpacity = document.querySelector('.test');
 const basePrice = 30;
 
 
@@ -17,7 +16,7 @@ checkbox.addEventListener('click', calculatePrice);
 
 function opencalculatorWindow() {
     calculatorWindow.style.display = 'flex';
-    calculatorOpacity.style.display = 'flex';
+    calculatorModal.style.display = 'flex';
 
 
 
@@ -25,7 +24,7 @@ function opencalculatorWindow() {
 
 function closeCalculatorWindow() {
     calculatorWindow.style.display = 'none';
-    calculatorOpacity.style.display = 'none';
+    calculatorModal.style.display = 'none';
 
 };
 
