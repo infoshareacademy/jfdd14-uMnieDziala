@@ -3,6 +3,7 @@ const ctx = canvas.getContext("2d");
 const scale = 50;
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
+const startButton = document.querySelector("button");
 
 class Swimmer {
     // pozycja głowy
@@ -73,10 +74,10 @@ class Enemy {
     }
     width = scale;
     height = scale;
-    color = ctx.createPattern(document.getElementById("seagull"), "repeat");
+    color = "white";
     x = (Math.floor(Math.random()*columns - 1) + 1)*scale;
     y = 0;
-    velY = scale;
+    velY = scale/8;
     create = () => {
         ctx.fillStyle = this.color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -86,27 +87,38 @@ class Enemy {
     };
 }
 
-const enemies = [];
+let enemies = [];
+let startGame;
+let moveEnemies;
 
 
 function newEnemies () {
-    window.setInterval ( () => {
+    startGame = setInterval ( () => {
         enemies.push(new Enemy);
         enemies.push(new Enemy);
-    }, 3000 );
+        if( enemies.length > 20 ){
+            enemies.push(new Enemy);
+        }
+        if( enemies.length > 40 ){
+            enemies.push(new Enemy);
+        }
+    }, 2000 );
 }
 
 function moving () {
-    window.setInterval ( () => {
+    moveEnemies = setInterval ( () => {
+        console.log(enemies);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         enemies.forEach( el => {
             el.create();
             el.update();
             swimmer.update();
         } )
-    }, 1000 );
+
+    }, 100 );
 }
 
+<<<<<<< HEAD
 function setup() {
     // Dodanie event listenera na wciśnięcie przycisku
     window.addEventListener("keydown", event => swimmer.changeDir(event.key));
@@ -121,3 +133,13 @@ function setup() {
 newEnemies();
 moving();
 setup();
+=======
+startButton.addEventListener("click", () => {
+    clearInterval(startGame);
+    clearInterval(moveEnemies);
+    enemies = [];
+    enemies.push(new Enemy);
+    newEnemies();
+    moving();
+} );
+>>>>>>> 42a972172c89f43baf3814978fddfcbd7a2d0d1c
