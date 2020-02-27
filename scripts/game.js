@@ -91,7 +91,6 @@ function newEnemies () {
 
 function moving () {
     moveEnemies = setInterval ( () => {
-        console.log(enemies);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         swimmer.draw();
         swimmer.update();
