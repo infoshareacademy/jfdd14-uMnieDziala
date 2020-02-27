@@ -8,11 +8,10 @@ const startButton = document.querySelector("button");
 class Swimmer {
     constructor() {
         this.draw();
-     }
-
+    }
     width = scale;
     height = scale;
-    x = Math.floor(columns/2) * scale ;
+    x = Math.floor(columns / 2) * scale;
     y = canvas.height - (this.height * 2);
     velX = 0;
     velY = 0;
@@ -27,52 +26,20 @@ class Swimmer {
         this.x += this.velX;
         this.y += this.velY;
     }
-
-    // changeDir = (btn) => {
-    //     switch (btn) {
-    //         case "w":
-    //             this.velX = 0;
-    //             this.velY = -(scale * 1);
-    //             break;
-    //         case "s":
-    //             this.velX = 0;
-    //             this.velY = scale * 1;
-    //             break;
-    //         case "a":
-    //             this.velX = -(scale * 1);
-    //             this.velY = 0;
-    //             break;
-    //         case "d":
-    //             this.velX = scale * 1;
-    //             this.velY = 0;
-    //             break;
-    //     }
-    // }
 }
 
 const swimmer = new Swimmer();
 
-// function Swimmer() {
-//     this.x = 0;
-//     this.y = 0;
-//     this.xSpeed = scale * 1;
-//     this.ySpeed = 0;
-
-//     this.draw = function() {
-//         ctx.fillStyle = "#FFFFFF";
-//         ctx.fillRect(this.x, this.y, scale, scale);
-//   }
-
 class Enemy {
-    constructor () {
+    constructor() {
         this.create();
     }
     width = scale;
     height = scale;
     color = "white";
-    x = (Math.floor(Math.random()*columns - 1) + 1)*scale;
+    x = (Math.floor(Math.random() * columns - 1) + 1) * scale;
     y = 0;
-    velY = scale/8;
+    velY = scale / 8;
     create = () => {
         ctx.fillStyle = this.color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -86,31 +53,30 @@ let enemies = [];
 let startGame;
 let moveEnemies;
 
-
-function newEnemies () {
-    startGame = setInterval ( () => {
+function newEnemies() {
+    startGame = setInterval(() => {
         enemies.push(new Enemy);
         enemies.push(new Enemy);
-        if( enemies.length > 20 ){
+        if (enemies.length > 20) {
             enemies.push(new Enemy);
         }
-        if( enemies.length > 40 ){
+        if (enemies.length > 40) {
             enemies.push(new Enemy);
         }
-    }, 2000 );
+    }, 2000);
 }
 
-function moving () {
-    moveEnemies = setInterval ( () => {
+function moving() {
+    moveEnemies = setInterval(() => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         swimmer.draw();
         swimmer.update();
-        enemies.forEach( el => {
+        enemies.forEach(el => {
             el.create();
             el.update();
-        } )
+        })
 
-    }, 100 );
+    }, 100);
 }
 
 startButton.addEventListener("click", () => {
@@ -120,19 +86,19 @@ startButton.addEventListener("click", () => {
     enemies.push(new Enemy);
     newEnemies();
     moving();
-} );
+});
 
-window.addEventListener('keydown', function(event){
-    if( event.key === "ArrowLeft" ){
+window.addEventListener('keydown', function (event) {
+    if (event.key === "ArrowLeft") {
         swimmer.velY = 0;
-        swimmer.velX = (scale * -1) / 4 ;
-    } else if ( event.key === "ArrowRight" ){
+        swimmer.velX = (scale * -1) / 4;
+    } else if (event.key === "ArrowRight") {
         swimmer.velY = 0;
         swimmer.velX = (scale * 1) / 4;
-    } else if ( event.key === "ArrowUp" ){
+    } else if (event.key === "ArrowUp") {
         swimmer.velX = 0;
         swimmer.velY = (scale * -1) / 4;
-    } else if ( event.key === "ArrowDown" ){
+    } else if (event.key === "ArrowDown") {
         swimmer.velX = 0;
         swimmer.velY = (scale * 1) / 4;
     }
