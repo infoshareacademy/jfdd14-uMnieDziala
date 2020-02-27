@@ -19,13 +19,14 @@
     position: relative;
     z-index: 15;
     width: 70%;
-    height: 50%;
+    height: 60%;
     background-color: var(--color-light-blue);
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
     justify-content: center;
+    border: 2px solid black;
 }
 
 .game-modal__btn-wrapper {
@@ -41,12 +42,12 @@
     border-radius: 30px;
     text-align: center;
     height: 3rem;
-    min-width: 6rem;
+    min-width: 7rem;
     border: none;
     background-color: var(--color-blue);
     color: var(--color-light-blue);
     outline: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     cursor: pointer;
     margin: 1rem 0.3rem;
 }
@@ -60,11 +61,12 @@
 
 @media (min-width: 1025px) {
     .game-modal__text {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     .game-modal__btn{
         min-width: 12rem;
         margin: 1rem 0.3rem;
+        font-size: 1.4rem;
     }
 
 }
