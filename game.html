@@ -12,11 +12,17 @@
 </head>
 <body>
     <header>
-        <img src="img/favicon_package_v0.16 (4)/android-chrome-96x96.png" alt="logo">
-        <h1>Dopłyń na Hel z <i>tripcity</i></h1>
-        <button>start</button>
+        <a href="index.html">
+            <img id="logo" src="img/favicon_package_v0.16 (4)/android-chrome-96x96.png" alt="logo">
+        </a>
+        <h1>Dopłyń na Hel z <i><a href="index.html">tripcity</a></i></h1>
     </header>
     <main>
+        <div id="buttons">
+            <button><b>start</b></button>
+            <button>instrukcja</button>
+        </div>
+        <p id="score">najlepszy wynik:</p>
         <canvas width="650px" height="650px"></canvas>
     </main>
     <script src="scripts/game.js"></script>
