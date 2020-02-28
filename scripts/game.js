@@ -89,6 +89,8 @@ startButton.addEventListener("click", () => {
 });
 
 window.addEventListener('keydown', function (event) {
+    collision();
+
     event.preventDefault();
     if (event.key === "ArrowLeft") {
         // swimmer.velY = 0;
@@ -119,3 +121,35 @@ window.addEventListener('keyup', function (event) {
         swimmer.velY = 0;
     }
 })
+
+
+///////////////////////COLLISION
+
+
+/* 
+function collision() {
+    setInterval(() => {
+        for(let i = 0; i < enemies.length; i++) {
+            if (swimmer.x === enemies[i].x && swimmer.y === enemies[i].y) {
+                console.log("kolizja")
+        }
+        }
+    },1000)
+   
+}
+ */
+
+function collision() {
+    setInterval(() => {
+        for(let i = 0; i < enemies.length; i++) {
+            if (swimmer.x === enemies[i].x && swimmer.y === enemies[i].y) {
+                console.log("kolizja")
+        }
+        }
+    },1000)
+   
+}
+
+
+
+
