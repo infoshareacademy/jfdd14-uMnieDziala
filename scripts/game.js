@@ -56,6 +56,8 @@ let moveEnemies;
 function newEnemies() {
     startGame = setInterval(() => {
         enemies.push(new Enemy);
+        /* if (swimmer.x === enemies.x && swimmer.y === enemies.y) {
+            console.log("kolizja")} */
         enemies.push(new Enemy);
         if (enemies.length > 20) {
             enemies.push(new Enemy);
@@ -89,7 +91,7 @@ startButton.addEventListener("click", () => {
 });
 
 window.addEventListener('keydown', function (event) {
-    collision();
+    //collision();
 
     event.preventDefault();
     if (event.key === "ArrowLeft") {
@@ -139,7 +141,7 @@ function collision() {
 }
  */
 
-function collision() {
+/* function collision() {
     setInterval(() => {
         for(let i = 0; i < enemies.length; i++) {
             if (swimmer.x === enemies[i].x && swimmer.y === enemies[i].y) {
@@ -149,7 +151,7 @@ function collision() {
     },1000)
    
 }
-
+ */
 
 
 
