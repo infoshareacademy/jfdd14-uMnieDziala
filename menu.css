@@ -55,6 +55,7 @@
         flex-direction: column;
         align-items: center;
         background: #000;
+        width: 100%;
     }
     header:hover .header__nav .header__button {
         display: block;
