@@ -53,11 +53,36 @@ let enemies = [];
 let startGame;
 let moveEnemies;
 
+
+
+function startCollision() {
+    enemies.forEach(function (el) {
+        const topEnemy = el.y - el.height / 2
+        const bottomEnemy = el.y + el.height / 2
+        const playerTop = swimmer.y - swimmer.height / 2;
+        const playerBottom = swimmer.y + swimmer.height / 2;
+        
+        const leftEnemy = el.x - el.width / 2
+        const rightEnemy = el.x + el.width / 2
+        const playerLeft = swimmer.x - swimmer.width / 2;
+        const playerRight = swimmer.x + swimmer.width / 2;
+        
+        if (bottomEnemy > playerTop && 
+            topEnemy < playerBottom &&
+            leftEnemy < playerRight && 
+            rightEnemy > playerLeft) {
+            console.log("kolizja");
+        }    
+    })
+};
+
+//function checkCollision(){ enemies.filter(startCollision) }
+
+
 function newEnemies() {
     startGame = setInterval(() => {
         enemies.push(new Enemy);
-        /* if (swimmer.x === enemies.x && swimmer.y === enemies.y) {
-            console.log("kolizja")} */
+        startCollision();
         enemies.push(new Enemy);
         if (enemies.length > 20) {
             enemies.push(new Enemy);
