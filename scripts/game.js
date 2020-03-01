@@ -4,6 +4,7 @@ const scale = 50;
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 const startButton = document.querySelector("button");
+const modalOnGame = document.querySelector(".onGame-modal")
 
 class Swimmer {
     constructor() {
@@ -54,7 +55,6 @@ let startGame;
 let moveEnemies;
 
 
-
 function checkCollision() {
     enemies.forEach((el) => {
         const topEnemy = el.y - el.height / 2
@@ -76,6 +76,7 @@ function checkCollision() {
             moveEnemies.clearInterval;
             clearInterval(1);
             clearInterval(2);
+            modalOnGame.classList.add("onGame-modal--active")
         }    
     })
 };
@@ -159,33 +160,17 @@ window.addEventListener('keydown', function (event) {
     }
 }) 
 
-///////////////////////COLLISION
+
+//////MODAL
+
+const btnPlayAgain = document.querySelector(".onGame-modal__btn--play-again")
+
+btnPlayAgain.addEventListener('click', ( ) => {
+    modalOnGame.classList.remove(".onGame-modal--active")
+})
 
 
-/* 
-function collision() {
-    setInterval(() => {
-        for(let i = 0; i < enemies.length; i++) {
-            if (swimmer.x === enemies[i].x && swimmer.y === enemies[i].y) {
-                console.log("kolizja")
-        }
-        }
-    },1000)
-   
-}
- */
 
-/* function collision() {
-    setInterval(() => {
-        for(let i = 0; i < enemies.length; i++) {
-            if (swimmer.x === enemies[i].x && swimmer.y === enemies[i].y) {
-                console.log("kolizja")
-        }
-        }
-    },1000)
-   
-}
- */
 
 
 

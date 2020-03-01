@@ -49,3 +49,63 @@ canvas {
     background: transparent;
     border: 5px solid var(--color-white);
 }
+
+/*MODAL*/
+.onGame-modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.685);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hiden;
+}
+
+.onGame-modal--active{
+    display: flex
+}
+
+.onGame-modal__wrapper{
+    position: relative;
+    z-index: 15;
+    width: 70%;
+    height: 60%;
+    background-color: var(--color-light-blue);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.onGame-modal__btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.onGame-modal__btn{
+    border-radius: 30px;
+    text-align: center;
+    height: 3rem;
+    min-width: 12rem;
+    border: none;
+    background-color: var(--color-blue);
+    color: var(--color-light-blue);
+    outline: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin: 1rem 0.3rem;
+}
+
+.onGame-modal__text {
+    font-size: 1.8rem;
+    width: 80%;
+    text-align: center;
+    margin: 0.5rem 1rem;
+}
