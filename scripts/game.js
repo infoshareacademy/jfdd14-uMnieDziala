@@ -55,35 +55,37 @@ let moveEnemies;
 
 
 
-function startCollision() {
-    enemies.forEach(function (el) {
+function checkCollision() {
+    enemies.forEach((el) => {
         const topEnemy = el.y - el.height / 2
         const bottomEnemy = el.y + el.height / 2
-        const playerTop = swimmer.y - swimmer.height / 2;
-        const playerBottom = swimmer.y + swimmer.height / 2;
+        const swimmerTop = swimmer.y - swimmer.height / 2;
+        const swimmerBottom = swimmer.y + swimmer.height / 2;
         
         const leftEnemy = el.x - el.width / 2
         const rightEnemy = el.x + el.width / 2
-        const playerLeft = swimmer.x - swimmer.width / 2;
-        const playerRight = swimmer.x + swimmer.width / 2;
+        const swimmerLeft = swimmer.x - swimmer.width / 2;
+        const swimmerRight = swimmer.x + swimmer.width / 2;
         
-        if (bottomEnemy > playerTop && 
-            topEnemy < playerBottom &&
-            leftEnemy < playerRight && 
-            rightEnemy > playerLeft) {
+        if (bottomEnemy > swimmerTop && 
+            topEnemy < swimmerBottom &&
+            leftEnemy < swimmerRight && 
+            rightEnemy > swimmerLeft) {
             console.log("kolizja");
+
+            moveEnemies.clearInterval;
+            clearInterval(1);
+            clearInterval(2);
         }    
     })
 };
-
-//function checkCollision(){ enemies.filter(startCollision) }
 
 
 function newEnemies() {
     startGame = setInterval(() => {
         enemies.push(new Enemy);
-        startCollision();
         enemies.push(new Enemy);
+        checkCollision();
         if (enemies.length > 20) {
             enemies.push(new Enemy);
         }
@@ -95,6 +97,7 @@ function newEnemies() {
 
 function moving() {
     moveEnemies = setInterval(() => {
+        checkCollision();
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         swimmer.draw();
         swimmer.update();
@@ -102,7 +105,6 @@ function moving() {
             el.create();
             el.update();
         })
-
     }, 100);
 }
 
@@ -116,8 +118,6 @@ startButton.addEventListener("click", () => {
 });
 
 window.addEventListener('keydown', function (event) {
-    //collision();
-
     event.preventDefault();
     if (event.key === "ArrowLeft") {
         // swimmer.velY = 0;
