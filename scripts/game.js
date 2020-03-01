@@ -117,26 +117,36 @@ startButton.addEventListener("click", () => {
     moving();
 });
 
+
+
 window.addEventListener('keydown', function (event) {
     event.preventDefault();
     if (event.key === "ArrowLeft") {
-        // swimmer.velY = 0;
-        swimmer.velX = (scale * -1) / 4;
+        if (swimmer.x > 0) {
+            swimmer.velX = (scale * -1) / 4;
+        } else if (swimmer.x === 0) {swimmer.velX = 0}
     }
-    if (event.key === "ArrowRight") {
-        // swimmer.velY = 0;
-        swimmer.velX = (scale * 1) / 4;
+    if (event.key === "ArrowRight" && event.key !== "ArrowLeft") {
+        if (swimmer.x < 600) {
+            swimmer.velX = (scale * 1) / 4
+        } else if (swimmer.x === 600) {
+            {swimmer.velX = 0}
+        }
     }
     if (event.key === "ArrowUp") {
-        // swimmer.velX = 0;
-        swimmer.velY = (scale * -1) / 4;
+        if (swimmer.y > 0) {
+            swimmer.velY = (scale * -1) / 4;
+        } else if (swimmer.y === 0) {swimmer.velY = 0}
     }
     if (event.key === "ArrowDown") {
-        // swimmer.velX = 0;
-        swimmer.velY = (scale * 1) / 4;
+        if (swimmer.y < 600) {
+            swimmer.velY = (scale * 1) / 4;
+        } else if (swimmer.y === 600) {
+            {swimmer.velY = 0}
+        }
     }
 })
-window.addEventListener('keyup', function (event) {
+/window.addEventListener('keyup', function (event) {
     event.preventDefault();
     if (event.key === "ArrowLeft") {
         swimmer.velX = 0;
@@ -147,8 +157,7 @@ window.addEventListener('keyup', function (event) {
     } else if (event.key === "ArrowDown") {
         swimmer.velY = 0;
     }
-})
-
+}) 
 
 ///////////////////////COLLISION
 
