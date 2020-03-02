@@ -5,7 +5,16 @@ const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 const startButton = document.querySelector("button");
 const modalOnGame = document.querySelector(".onGame-modal");
-const scoreOnGame = document.querySelector('.onGame-modal__score')
+const scoreOnGame = document.querySelector('.onGame-modal__score');
+const theBestScore = document.getElementById('score');
+
+
+//HEADER SCORE
+if (localStorage.getItem("score")){
+    theBestScore.innerHTML = `Twój najlepszy wynik: ${localStorage.getItem('score')}`
+}
+
+//GAME
 
 class Swimmer {
     constructor() {
