@@ -73,13 +73,15 @@ canvas {
     z-index: 15;
     width: 70%;
     height: 60%;
-    background-color: var(--color-light-blue);
+    background-color: var(--color-white);
+    opacity: 0.9;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
     justify-content: center;
     border: none;
+    border: 1px solid #888
 }
 
 .onGame-modal__btn-wrapper {
@@ -92,20 +94,29 @@ canvas {
 .onGame-modal__btn{
     border-radius: 30px;
     text-align: center;
-    height: 3rem;
-    min-width: 12rem;
-    border: none;
-    background-color: var(--color-blue);
-    color: var(--color-light-blue);
+    height: 3.5rem;
+    min-width: 8rem;
+    border: 3px solid var(--color-dark);
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    opacity: 100;
     outline: none;
     font-size: 1.4rem;
     cursor: pointer;
     margin: 1rem 0.3rem;
 }
 
+.onGame-modal__btn:hover{
+    background: var(--color-dark);
+    color: var(--color-white);
+    border: 3px solid var(--color-dark);
+
+}
+
 .onGame-modal__text {
     font-size: 1.8rem;
     width: 80%;
+    color: var(--color-dark);
     text-align: center;
     margin: 0.5rem 1rem;
 }
