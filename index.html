@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="functions.css">
     <link rel="stylesheet" href="details.css">
     <link rel="stylesheet" type="text/css" href="invitation.css">
+    <link rel="stylesheet" type="text/css" href="game-modal.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" type="text/css" href="cookies.css">
     <link rel="stylesheet" type="text/css" href="calculator.css">
@@ -223,20 +224,32 @@
             <p class="footer__small-text ">All Rights Reserved</p>
         </footer>
         </div>
-        <div id="cookie" class="cookie">
-            <div class="cookie__container">
-                <p class='cookie__container--p'>
+    </div>
+    <div id="cookie" class="cookie">
+        <div class="cookie__container">
+            <p class='cookie__container--p'>
                     Używamy plików cookie, aby zrozumieć, w jaki sposób korzystasz z naszej witryny i aby poprawić Twoje wrażenia. Obejmuje to personalizowanie treści i reklam.
-                </p>
-                <button class="cookie__container--button " onclick="cookieSaveToLocalStorage() ">OK</button>
+            </p>
+            <button class="cookie__container--button " onclick="cookieSaveToLocalStorage() ">OK</button>
+        </div>
+    </div>
+    <div class="game-modal">
+        <div class="game-modal__wrapper">
+            <h2 class="game-modal__text">Dziękujemy!</h2>
+            <h2 class="game-modal__text">Zagraj w naszą grę i dopłyń na Hel!</h2>
+            <div class="game-modal__btn-wrapper" >
+                <a href="game.html" target="blank"><button class="game-modal__btn game-modal__btn--play" type="button" formaction="game.html">Gram!</button></a>
+                <button class="game-modal__btn game-modal__btn--quit">Nie gram</button>
             </div>
         </div>
-        <script src="scripts/hero.js"></script>
-        <script src="scripts/form.js"></script>
-        <script src="scripts/nav-backlight.js"></script>
-        <script src="scripts/about-us-animation.js"></script>
-        <script src="scripts/cookie.js"></script>
-        <script src="scripts/calculator.js "></script>
+    </div>
+    <script src="scripts/hero.js"></script>
+    <script src="scripts/form.js"></script>
+    <script src="scripts/nav-backlight.js"></script>
+    <script src="scripts/about-us-animation.js"></script>
+    <script src="scripts/cookie.js"></script>
+    <script src="scripts/calculator.js "></script>
+    <script src="scripts/game-modal.js"></script>
 </body>
 
 </html>
