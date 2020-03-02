@@ -16,18 +16,19 @@
     <link rel="stylesheet" type="text/css" href="invitation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" type="text/css" href="cookies.css">
+    <link rel="stylesheet" type="text/css" href="calculator.css">
     <link rel="shortcut icon" href="img/favicon_package_v0.16 (4)/favicon-16x16.png" type="image/x-icon">
     <link rel="icon" href="img/favicon_package_v0.16 (4)/favicon-16x16.png" type="image/x-icon">
-
 </head>
 
 <body>
+
     <div class="content">
         <header class="header">
             <div class="header__menu">
                 <a href="#hero" class="header__logo">
-                <img class="header__img" src="img/logo_white.png" alt="logo">
-                <a href="#top" class="header__name active">tripcity</a>
+                    <img class="header__img" src="img/logo_white.png" alt="logo">
+                    <a href="#top" class="header__name active">tripcity</a>
                 </a>
                 <a class="header__button">menu</a>
             </div>
@@ -102,6 +103,46 @@
                 <p class="details__text">Łatwo przejrzysz wybrane miejsca na mapach i zaplanujesz trasę</p>
             </div>
         </section>
+        <div id="calculator" class="calculator">
+            <div class='calculator__info'>
+                <h2 class='calculator__h2'>Im dłuzej jesteś z nami, tym płacisz mniej za subskrypcję.</h2>
+                <button id='openButton' type='button' class="calculator__modal--button">
+            <h4>Wylicz swoją zniżkę</h4>
+        </button>
+            </div>
+            <div class='calculator__dialog--modalBox'>
+                <dialog open id='calculator__dialog' class="calculator__dialog">
+                    <form method="dialog" class="calculator__dialog--content">
+                        <label class="calculator__dialog--label">Oblicz swoją zniżkę!</label>
+                        <div class='calculator__slidecontainer'>
+                            <input oninput='checkSliderPosition()' id='calculator__dialog--input' class="calculator__dialog--input" type='range' min='0' max='3' step='1' list='calculator__dialog--tickmarsk' value='0'>
+                            <div class='calculator__dialog--tickmarsk'>
+                                <p>0 m/c</p>
+                                <p>3 m/c</p>
+                                <p>6 m/c</p>
+                                <p>12 m/c</p>
+                            </div>
+                        </div>
+                        <output class="calculator__dialog--output">
+                    <div class='priceWithoutDiscount'>cena podstawowa
+                        <p id='calculator__textNormalPrice'class='textNormalPrice'></p>
+                    </div>
+                    <div class='priceWithDiscount'>cena po zniżce
+                        <p id='calculator__textDiscountPrice'class='textDiscountPrice'></p>
+                    </div>
+                </output>
+                        <div class="calculator__checkbox">
+                            <label class="calculator__checkbox--label">emeryci / studenci +5% zniżki <input type="checkbox" id='calculator__dialog--checkbox' class='calculator__dialog--checkbox'></label>
+                        </div>
+                        <menu class="calculator__dialog--menu">
+                            <button id='calculator__dialog--buttonAccept' class="calculator__dialog--button" type="button" value="Potwiedź">Potwierdź</button>
+                            <button id='calculator__dialog--buttonExit' class="calculator__dialog--button" type="button" value="wyjdź">Wyjdź</button>
+                        </menu>
+                    </form>
+                </dialog>
+            </div>
+        </div>
+
         <section id="sign-up" class="menu sign-up">
             <h3 class="sign-up__title">
                 Chcesz zwiedzić z nami Trójmiasto? <br>Zostaw nam maila a poinformujemy Cię, gdy pojawią się nowe funkcje.
@@ -125,9 +166,9 @@
                                 <a href="https://www.linkedin.com/in/julia-%C5%82ojek/" target="blank"><i class="about__icon fab fa-linkedin"></i></a>
                                 <a href="https://github.com/JuliaLojek" target="blank"><i class="about__icon fab fa-github"></i></a>
                                 <a href="https://julialojek.github.io/about-me/" target="blank"><i class="about__icon fas fa-link"></i></a>
-                            </div>     
+                            </div>
                         </div>
-                    </div> 
+                    </div>
                     <p class="about__name">Julia Łojek</p>
                 </div>
                 <div class="test">
@@ -160,7 +201,7 @@
                     </div>
                     <p class="about__name">Robert Pasieczny</p>
                 </div>
-                <div class="test"> 
+                <div class="test">
                     <div class="about__animation animation__container ">
                         <div class="about__pair animation__container__inner">
                             <div class="picture-wrap animation-front">
@@ -175,25 +216,27 @@
                     </div>
                     <p class="about__name">Sabina Sadowska</p>
                 </div>
-            </div>
         </section>
+
         <footer class="footer">
-            <p class="footer__text">&copy; 2020 uMnieDziała</p>
-            <p class="footer__small-text">All Rights Reserved</p>
+            <p class="footer__text ">&copy; 2020 uMnieDziała</p>
+            <p class="footer__small-text ">All Rights Reserved</p>
         </footer>
-    </div>
-    <div id="cookie" class="cookie">
-        <div class="cookie__container">
-            <p class='cookie__container--p'>
-                Używamy plików cookie, aby zrozumieć, w jaki sposób korzystasz z naszej witryny i aby poprawić Twoje wrażenia. Obejmuje to personalizowanie treści i reklam.
-            </p>
-            <button class="cookie__container--button" onclick="cookieSaveToLocalStorage()">OK</button>
         </div>
-    </div>
-    <script src="scripts/hero.js"></script>
-    <script src="scripts/form.js"></script>
-    <script src="scripts/nav-backlight.js"></script>
-    <script src="scripts/about-us-animation.js"></script>
-    <script src="scripts/cookie.js"></script>
+        <div id="cookie" class="cookie">
+            <div class="cookie__container">
+                <p class='cookie__container--p'>
+                    Używamy plików cookie, aby zrozumieć, w jaki sposób korzystasz z naszej witryny i aby poprawić Twoje wrażenia. Obejmuje to personalizowanie treści i reklam.
+                </p>
+                <button class="cookie__container--button " onclick="cookieSaveToLocalStorage() ">OK</button>
+            </div>
+        </div>
+        <script src="scripts/hero.js"></script>
+        <script src="scripts/form.js"></script>
+        <script src="scripts/nav-backlight.js"></script>
+        <script src="scripts/about-us-animation.js"></script>
+        <script src="scripts/cookie.js"></script>
+        <script src="scripts/calculator.js "></script>
 </body>
+
 </html>

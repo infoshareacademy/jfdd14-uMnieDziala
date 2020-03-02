@@ -40,7 +40,7 @@
     text-align: center;
     height: 3.5rem;
     min-width: 20rem;
-    border: 1px solid var(--color-blue);    
+    border: 1px solid var(--color-blue);
     background-color: var(--color-blue);
     color: var(--color-white);
     outline: none;
@@ -49,7 +49,6 @@
     align-self: center;
     margin-top: 1rem;
 }
-
 
 .form__info {
     margin: 2rem 0;
@@ -64,11 +63,9 @@
         width: 20rem;
         min-width: 24rem;
     }
-
     p.form__info {
         font-size: 1.3rem;
     }
-
     .form__button {
         height: 3.5rem;
         min-width: 24.2rem;
