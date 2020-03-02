@@ -11,6 +11,7 @@
     left: 0;
     align-items: center;
     justify-content: center;
+    z-index: 10;
 }
 
 .calculator {
@@ -42,25 +43,27 @@
 }
 
 .calculator__modal--button {
-    border-radius: 20px;
+    border-radius: 30px;
     text-align: center;
-    height: 3rem;
-    min-width: 4rem;
-    border: none;
+    height: 3.5rem;
+    min-width: 20rem;
+    border: 1px solid var(--color-blue);
     background-color: var(--color-blue);
-    color: var(--color-light-blue);
+    color: var(--color-white);
     outline: none;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     cursor: pointer;
-    padding: 14px;
+    align-self: center;
+    margin-top: 1rem;
 }
 
 .calculator__dialog {
     display: none;
     justify-content: center;
     width: 800px;
-    height: 400px;
+    height: 450px;
     margin: auto;
+    border: none;
 }
 
 .calculator__dialog--content {
@@ -75,12 +78,17 @@
     justify-content: center;
     font-weight: bolder;
     font-size: larger;
+    text-align: center;
+}
+
+.calculator__dialog--checkbox {
+    margin-left: 20px;
 }
 
 .calculator__dialog--tickmarsk {
     display: flex;
     justify-content: space-around;
-    padding: 0 10px;
+    padding: 10px 5px;
 }
 
 .calculator__dialog--tickmarsk p {
@@ -91,13 +99,13 @@
     width: 1px;
     background: #D3D3D3;
     height: 10px;
-    line-height: 40px;
+    line-height: 30px;
     margin: 0 0 0 0;
 }
 
 .calculator__dialog--input {
     cursor: pointer;
-    width: 75%;
+    width: 76%;
     justify-self: center;
     margin: auto;
     display: flex;
@@ -122,14 +130,15 @@ button {
 }
 
 .calculator__dialog--button {
-    height: 3rem;
-    min-width: 6rem;
+    height: 3.5rem;
+    width: 10rem;
     color: var(--color-light-blue);
     background-color: var(--color-blue);
     border: none;
     border-radius: 20px;
     margin-left: 10px;
     margin-right: 10px;
+    font-size: 1.2rem;
 }
 
 .textNormalPrice {
@@ -140,6 +149,7 @@ button {
 .textDiscountPrice {
     display: flex;
     justify-content: center;
+    font-size: 25px;
 }
 
 .calculator__checkbox {
@@ -155,10 +165,12 @@ button {
 
 .priceWithoutDiscount {
     font-weight: bolder;
+    margin-top: 16px;
 }
 
 .priceWithDiscount {
     font-weight: bolder;
+    margin-top: 25px;
 }
 
 @media (max-width: 800px) {
@@ -172,4 +184,147 @@ button {
     .calculator__dialog--label {
         font-weight: bolder;
     }
+    .calculator__dialog {
+        justify-content: center;
+        width: 320px;
+        height: 568px;
+        margin: auto;
+        border: none;
+    }
+    .calculator__dialog--label {
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        text-align: center;
+    }
+    .calculator__dialog--input {
+        width: 70%;
+    }
+    .calculator__dialog--tickmarsk {
+        margin: 0 14px
+    }
+    .calculator__dialog--tickmarsk p {
+        line-height: 20px;
+        margin-top: 10px
+    }
+    input[type=range] {
+        width: 70%;
+    }
+    .calculator__dialog--button {
+        height: 2.5rem;
+        width: 8rem;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 1.2rem;
+    }
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -14px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: var(--color-blue);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: var(--color-blue);
+    ;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: var(--color-blue);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: var(--color-blue);
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: var(--color-blue);
+}
+
+input[type=range]::-ms-fill-upper {
+    background: var(--color-blue);
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: var(--color-blue);
 }
