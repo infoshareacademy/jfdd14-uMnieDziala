@@ -1,0 +1,175 @@
+.calculator__dialog--modalBox {
+    display: none;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    display: flex;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--color-light-blue);
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.calculator__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculator__h2 {
+    padding: 20px;
+}
+
+.calculator__modal {
+    display: flex;
+    align-items: center;
+}
+
+.calculator__modal--button {
+    border-radius: 20px;
+    text-align: center;
+    height: 3rem;
+    min-width: 4rem;
+    border: none;
+    background-color: var(--color-blue);
+    color: var(--color-light-blue);
+    outline: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 14px;
+}
+
+.calculator__dialog {
+    display: none;
+    justify-content: center;
+    width: 800px;
+    height: 400px;
+    margin: auto;
+}
+
+.calculator__dialog--content {
+    background-color: var(--color-light-blue);
+    display: grid;
+    width: 100%;
+}
+
+.calculator__dialog--label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.calculator__dialog--tickmarsk {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10px;
+}
+
+.calculator__dialog--tickmarsk p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 1px;
+    background: #D3D3D3;
+    height: 10px;
+    line-height: 40px;
+    margin: 0 0 0 0;
+}
+
+.calculator__dialog--input {
+    cursor: pointer;
+    width: 75%;
+    justify-self: center;
+    margin: auto;
+    display: flex;
+}
+
+button {
+    cursor: pointer;
+    border: transparent;
+    outline: none
+}
+
+.calculator__dialog--output {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.calculator__dialog--menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator__dialog--button {
+    height: 3rem;
+    min-width: 6rem;
+    color: var(--color-light-blue);
+    background-color: var(--color-blue);
+    border: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.textNormalPrice {
+    display: flex;
+    justify-content: center;
+}
+
+.textDiscountPrice {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator__checkbox {
+    display: flex;
+}
+
+.calculator__checkbox--label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.priceWithoutDiscount {
+    font-weight: bolder;
+}
+
+.priceWithDiscount {
+    font-weight: bolder;
+}
+
+@media (max-width: 800px) {
+    .calculator__h2 {
+        display: flex;
+        text-align: center;
+    }
+    .calculator__dialog {
+        width: 320px;
+    }
+    .calculator__dialog--label {
+        font-weight: bolder;
+    }
+}
