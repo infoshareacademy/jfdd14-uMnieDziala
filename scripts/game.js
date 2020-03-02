@@ -4,7 +4,8 @@ const scale = 50;
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 const startButton = document.querySelector("button");
-const modalOnGame = document.querySelector(".onGame-modal")
+const modalOnGame = document.querySelector(".onGame-modal");
+const scoreOnGame = document.querySelector('.onGame-modal__score')
 
 class Swimmer {
     constructor() {
@@ -72,14 +73,27 @@ function checkCollision() {
             leftEnemy < swimmerRight && 
             rightEnemy > swimmerLeft) {
             console.log("kolizja");
-
             moveEnemies.clearInterval;
             clearInterval(1);
-            clearInterval(2);
+            clearInterval(2);;
+            getScore()
             modalOnGame.classList.add("onGame-modal--active")
         }    
     })
 };
+
+function getScore() {
+    let score = enemies.length;
+    if (!localStorage.getItem('score')){
+        localStorage.setItem('score', score)
+    }
+    else if (localStorage.getItem('score') > enemies.length) {
+        scoreOnGame.innerHTML = `Twój wynik to: ${score}`
+    } else {
+        localStorage.setItem('score', score)
+        scoreOnGame.innerHTML = `Twój wynik to: ${score}`
+    }   
+}
 
 
 function newEnemies() {
