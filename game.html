@@ -12,13 +12,30 @@
 </head>
 <body>
     <header>
-        <img src="img/favicon_package_v0.16 (4)/android-chrome-96x96.png" alt="logo">
-        <h1>Dopłyń na Hel z <i>tripcity</i></h1>
-        <button>start</button>
+        <a href="index.html">
+            <img id="logo" src="img/favicon_package_v0.16 (4)/android-chrome-96x96.png" alt="logo">
+        </a>
+        <h1>Dopłyń na Hel z <i><a href="index.html">tripcity</a></i></h1>
     </header>
     <main>
+        <div id="buttons">
+            <button><b>start</b></button>
+            <button>instrukcja</button>
+        </div>
+        <p id="score"></p>
         <canvas width="650px" height="650px"></canvas>
     </main>
+    <div class="onGame-modal">
+        <div class="onGame-modal__wrapper">
+            <h2 class="onGame-modal__text onGame-modal__motivation"></h2>
+            <h2 class="onGame-modal__text onGame-modal__score"></h2>
+            <h2 class="onGame-modal__text">Chcesz zagrać ponownie?</h2>
+            <div class="onGame-modal__btn-wrapper" >
+                <a href="game.html"><button class="onGame-modal__btn onGame-modal__btn--play-again" type="button">Tak!</button></a>
+                <a href="index.html"><button class="onGame-modal__btn onGame-modal__btn--toLandingPage" type="button">Nie</button></a>
+            </div>
+        </div>
+    </div>
     <script src="scripts/game.js"></script>
 </body>
 </html>

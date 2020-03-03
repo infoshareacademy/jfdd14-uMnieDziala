@@ -4,14 +4,28 @@ body {
     background-size: cover;
 }
 
+a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
 header {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 650px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 15px auto;
+    padding: 10px;
+}
+
+#logo {
+    display: block;
+    height: 40px;
+}
+
+h1 {
+    font-family: Comfortaa;
+    color: var(--color-white);
 }
 
 main {
@@ -20,16 +34,17 @@ main {
     padding-bottom: 100px;
 }
 
-h1 {
-    font-family: Comfortaa;
-    color: var(--color-white);
-    margin: 15px;
+#buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
 }
 
 button {
-    padding: 15px;
+    padding: 10px;
     font-family: Comfortaa;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    width: 250px;
     border-radius: 30px;
     border: 3px solid var(--color-dark);
     cursor: pointer;
@@ -37,9 +52,17 @@ button {
 button:focus {
     outline: none;
 }
-button:hover{
+button:hover {
     background: transparent;
     border: 3px solid var(--color-white);
+    color: var(--color-white);
+}
+
+#score {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.3rem;
     color: var(--color-white);
 }
 
@@ -48,4 +71,79 @@ canvas {
     margin: 0 auto;
     background: transparent;
     border: 5px solid var(--color-white);
+}
+
+/*MODAL*/
+.onGame-modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.685);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hiden;
+}
+
+.onGame-modal--active{
+    display: flex
+}
+
+.onGame-modal__wrapper{
+    position: relative;
+    z-index: 15;
+    width: 70%;
+    height: 60%;
+    background-color: var(--color-white);
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border: 1px solid #888
+}
+
+.onGame-modal__btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.onGame-modal__btn{
+    border-radius: 30px;
+    text-align: center;
+    height: 3.5rem;
+    max-width: 8rem;
+    border: 3px solid var(--color-dark);
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    opacity: 100;
+    outline: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin: 1rem 0.3rem;
+}
+
+.onGame-modal__btn:hover{
+    background: var(--color-dark);
+    color: var(--color-white);
+    border: 3px solid var(--color-dark);
+
+}
+
+.onGame-modal__text {
+    font-size: 1.6rem;
+    width: 80%;
+    color: var(--color-dark);
+    text-align: center;
+    margin: 0.5rem 1rem;
+}
+
+.onGame-modal__score {
+    color: var(--color-blue);
 }
