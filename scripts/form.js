@@ -1,5 +1,6 @@
 const button = document.querySelector(".form__button");
 const input = document.querySelector(".form__input");
+const modal = document.querySelector('.game-modal');
 
 
 /* on preventDefault html email validation doesn't work, solution from:
@@ -24,8 +25,8 @@ function emailToStorage(event) {
         alert("Niepoprawny adres email")
     } else {
         localStorage.setItem("email", inputValue);
-        alert("Dziękujemy :)")
-
+        console.log(modal)
+        modal.classList.add('game-modal--active')
     } 
 }
 
