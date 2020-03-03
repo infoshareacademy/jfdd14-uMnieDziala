@@ -75,7 +75,6 @@ function moving() {
             el.create();
             el.update();
         })
-
     }, 100);
 }
 
