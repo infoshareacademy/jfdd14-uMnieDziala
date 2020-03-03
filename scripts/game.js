@@ -95,7 +95,8 @@ function checkCollision() {
 function getScore() {
     let score = enemies.length;
     if (!localStorage.getItem('score')){
-        localStorage.setItem('score', score)
+        localStorage.setItem('score', score);
+        scoreOnGame.innerHTML = `Twój wynik to: ${score}`
     }
     else if (localStorage.getItem('score') > enemies.length) {
         scoreOnGame.innerHTML = `Twój wynik to: ${score}`
@@ -184,7 +185,7 @@ window.addEventListener('keydown', function (event) {
         }
     }
 })
-/window.addEventListener('keyup', function (event) {
+window.addEventListener('keyup', function (event) {
     event.preventDefault();
     if (event.key === "ArrowLeft") {
         swimmer.velX = 0;
