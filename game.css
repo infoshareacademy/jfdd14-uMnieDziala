@@ -118,7 +118,7 @@ canvas {
     border-radius: 30px;
     text-align: center;
     height: 3.5rem;
-    min-width: 8rem;
+    max-width: 8rem;
     border: 3px solid var(--color-dark);
     background-color: var(--color-white);
     color: var(--color-dark);
@@ -137,9 +137,13 @@ canvas {
 }
 
 .onGame-modal__text {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     width: 80%;
     color: var(--color-dark);
     text-align: center;
     margin: 0.5rem 1rem;
+}
+
+.onGame-modal__score {
+    color: var(--color-blue);
 }

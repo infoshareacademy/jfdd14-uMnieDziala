@@ -7,6 +7,8 @@ const startButton = document.querySelector("button");
 const modalOnGame = document.querySelector(".onGame-modal");
 const scoreOnGame = document.querySelector('.onGame-modal__score');
 const theBestScore = document.getElementById('score');
+let motivationText = document.querySelector('.onGame-modal__motivation');
+
 
 
 //HEADER SCORE
@@ -15,7 +17,6 @@ if (localStorage.getItem("score")){
 }
 
 //GAME
-
 class Swimmer {
     constructor() {
         this.draw();
@@ -81,11 +82,11 @@ function checkCollision() {
             topEnemy < swimmerBottom &&
             leftEnemy < swimmerRight && 
             rightEnemy > swimmerLeft) {
-            console.log("kolizja");
             moveEnemies.clearInterval;
             clearInterval(1);
             clearInterval(2);;
-            getScore()
+            getScore();
+            getMotivated();
             modalOnGame.classList.add("onGame-modal--active")
         }    
     })
@@ -104,6 +105,15 @@ function getScore() {
     }   
 }
 
+function getMotivated() {
+    if (enemies.length > 1 && enemies.length < 40) {
+        motivationText.innerHTML = 'Super, tak trzymaj a dopłyniesz na Hel!'
+    } else if (enemies.length >= 40 && enemies.length < 100) {
+        motivationText.innerHTML = 'Wow! Dobrze Ci idzie! Płyń dalej!'
+    } else if (enemies.length >= 100) {
+        motivationText.innerHTML = 'Fantastycznie! Już widać Hel na horyzoncie!'
+    }
+}
 
 function newEnemies() {
     startGame = setInterval(() => {
@@ -145,28 +155,32 @@ startButton.addEventListener("click", () => {
 
 window.addEventListener('keydown', function (event) {
     event.preventDefault();
-    if (event.key === "ArrowLeft") {
+    if (event.key === "ArrowLeft") { 
         if (swimmer.x > 0) {
-            swimmer.velX = (scale * -1) / 4;
-        } else if (swimmer.x === 0) {swimmer.velX = 0}
+            swimmer.velX = (scale * -1) / 4
+        } else if (swimmer.x === 0) {
+            swimmer.velX = 0
+        } 
     }
-    if (event.key === "ArrowRight" && event.key !== "ArrowLeft") {
+    if (event.key === "ArrowRight") {
         if (swimmer.x < 600) {
             swimmer.velX = (scale * 1) / 4
         } else if (swimmer.x === 600) {
-            {swimmer.velX = 0}
+            swimmer.velX = 0
         }
     }
     if (event.key === "ArrowUp") {
         if (swimmer.y > 0) {
-            swimmer.velY = (scale * -1) / 4;
-        } else if (swimmer.y === 0) {swimmer.velY = 0}
+            swimmer.velY = (scale * -1) / 4
+        } else if (swimmer.y === 0) {
+            swimmer.velY = 0
+        }
     }
     if (event.key === "ArrowDown") {
         if (swimmer.y < 600) {
             swimmer.velY = (scale * 1) / 4;
         } else if (swimmer.y === 600) {
-            {swimmer.velY = 0}
+            swimmer.velY = 0
         }
     }
 })
@@ -182,7 +196,6 @@ window.addEventListener('keydown', function (event) {
         swimmer.velY = 0;
     }
 }) 
-
 
 //////MODAL
 
