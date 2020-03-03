@@ -4,6 +4,13 @@ const scale = 50;
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 const startButton = document.querySelector("button");
+const enemyImage = document.getElementById('enemyImage'); /////////// moje
+const swimmerTop = document.getElementById('swimmerTop');
+const swimmerDown = document.getElementById('swimmerDown');
+const swimmerLeft = document.getElementById('swimmerLeft');
+const swimmerRight = document.getElementById('swimmerRight');
+
+
 
 class Swimmer {
     constructor() {
@@ -20,6 +27,7 @@ class Swimmer {
     draw = () => {
         ctx.fillStyle = this.color;
         ctx.fillRect(this.x, this.y, scale, scale);
+        ctx.drawImage(swimmerTop, this.x, this.y) //dziala ale do zmiany
     }
 
     update = () => {
@@ -34,15 +42,17 @@ class Enemy {
     constructor() {
         this.create();
     }
+    image = enemyImage
     width = scale;
     height = scale;
-    color = "white";
+    color = 'transparent';
     x = (Math.floor(Math.random() * columns - 1) + 1) * scale;
     y = 0;
     velY = scale / 8;
     create = () => {
         ctx.fillStyle = this.color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.drawImage(enemyImage, this.x, this.y) /// działa
     };
     update = () => {
         this.y += this.velY;
@@ -88,7 +98,7 @@ startButton.addEventListener("click", () => {
     moving();
 });
 
-window.addEventListener('keydown', function (event) {
+window.addEventListener('keydown', function(event) {
     if (event.key === "ArrowLeft") {
         swimmer.velY = 0;
         swimmer.velX = (scale * -1) / 4;
