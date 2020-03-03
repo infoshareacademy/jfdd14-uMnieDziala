@@ -5,11 +5,7 @@ const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 const startButton = document.querySelector("button");
 const enemyImage = document.getElementById('enemyImage'); /////////// moje
-const swimmerTop = document.getElementById('swimmerTop');
-const swimmerDown = document.getElementById('swimmerDown');
-const swimmerLeft = document.getElementById('swimmerLeft');
-const swimmerRight = document.getElementById('swimmerRight');
-
+const swimmerImage = document.getElementById('swimmer');
 
 
 class Swimmer {
@@ -22,12 +18,12 @@ class Swimmer {
     y = canvas.height - (this.height * 2);
     velX = 0;
     velY = 0;
-    color = "red";
+    color = "transparent";
 
     draw = () => {
         ctx.fillStyle = this.color;
         ctx.fillRect(this.x, this.y, scale, scale);
-        ctx.drawImage(swimmerTop, this.x, this.y) //dziala ale do zmiany
+        ctx.drawImage(swimmerImage, this.x, this.y);
     }
 
     update = () => {
