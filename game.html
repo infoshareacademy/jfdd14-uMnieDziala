@@ -29,9 +29,26 @@
         </div>
     </header>
     <main>
+        <div id="buttons">
+            <button><b>start</b></button>
+            <button>instrukcja</button>
+        </div>
+        <p id="score"></p>
         <canvas width="650px" height="650px"></canvas>
+        <img id='enemyImage' src='img/seagull-sm.png' style="display: none">
+        <img id='swimmer' src='img/swimmer 50x50.png' style="display: none">
     </main>
-
+    <div class="onGame-modal">
+        <div class="onGame-modal__wrapper">
+            <h2 class="onGame-modal__text onGame-modal__motivation"></h2>
+            <h2 class="onGame-modal__text onGame-modal__score"></h2>
+            <h2 class="onGame-modal__text">Chcesz zagrać ponownie?</h2>
+            <div class="onGame-modal__btn-wrapper" >
+                <a href="game.html"><button class="onGame-modal__btn onGame-modal__btn--play-again" type="button">Tak!</button></a>
+                <a href="index.html"><button class="onGame-modal__btn onGame-modal__btn--toLandingPage" type="button">Nie</button></a>
+            </div>
+        </div>
+    </div>
     <script src="scripts/game.js"></script>
     <script src="scripts/instruction.js"></script>
 </body>
