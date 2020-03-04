@@ -46,3 +46,11 @@ p {
     text-decoration: none;
     cursor: pointer;
   }
+
+@media (max-width: 500px) {
+  .modal__instruction--content {
+    font-size: 1.1rem;
+    padding: 30px;
+    position: relative;
+    }
+}
