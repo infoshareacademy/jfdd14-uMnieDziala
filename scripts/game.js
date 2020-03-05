@@ -9,6 +9,7 @@ const swimmerImage = document.getElementById('swimmer');
 const modalOnGame = document.querySelector(".onGame-modal");
 const scoreOnGame = document.querySelector('.onGame-modal__score');
 const theBestScore = document.getElementById('score');
+const currentScore = document.getElementById('current-score');
 let motivationText = document.querySelector('.onGame-modal__motivation');
 let swimmer = undefined;
 let enemies = [];
@@ -75,8 +76,8 @@ function checkCollision() {
             leftEnemy < swimmerRight &&
             rightEnemy > swimmerLeft) {
             moveEnemies.clearInterval;
-            clearInterval(1);
-            clearInterval(2);;
+            clearInterval(startGame);
+            clearInterval(moveEnemies);
             getScore();
             getMotivated();
             modalOnGame.classList.add("onGame-modal--active")
@@ -118,6 +119,7 @@ function newEnemies() {
         if (enemies.length > 40) {
             enemies.push(new Enemy);
         }
+        currentScore.innerHTML = `Punkty: ${enemies.length}`;
     }, 2000);
 }
 
