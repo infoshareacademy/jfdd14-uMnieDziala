@@ -49,6 +49,7 @@ button {
     border: 3px solid var(--color-dark);
     cursor: pointer;
 }
+
 button:focus {
     outline: none;
 }
