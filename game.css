@@ -59,8 +59,9 @@ button:hover {
     color: var(--color-white);
 }
 
-#score {
-    display: block;
+#scores {
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
     padding: 15px;
     font-size: 1.3rem;
