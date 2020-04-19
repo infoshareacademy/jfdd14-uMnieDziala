@@ -91,7 +91,7 @@ header {
 }
 
 .active {
-    color: var(--color-blue);
+    color:rgb(39, 134, 193);
 }
 
 @media (max-width: 360px){
