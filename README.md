@@ -1,7 +1,9 @@
 # jfdd14-uMnieDziala
 
+![landing-page-1](https://user-images.githubusercontent.com/60104519/79699600-cf1e6a80-8290-11ea-8ce6-e286326d79e5.gif)
+
 ### Our landing page will beautifully present you our Tripcity app product:
-- at the very beginning there will be great photos from all over the Tricity,
+- at the very beginning there will be great photos from all over the Tricity (as above),
 - to navigate our site you can use links in the navigation bar or use the mouse scroll,
 - on the landing page you will also find the main functions of the Tipcity application,
 - the Tripcity application can be used for free, but also after purchasing a subscription it receives additional functions. Therefore, the landing page has a subscription calculator that will easily calculate the cost of the subscription.
@@ -10,8 +12,12 @@
 
 ### You can find, test and use **tripcity landing page** here: [Tripcity landing Page](http://www.umniedziala.jfdd14.is-academy.pl/ "To the landing page")
 
-Here is the Tripcity app: [Tripcity App](http://app.umniedziala.jfdd14.is-academy.pl/ "To the Tripcity App")
+![landing-page-2](https://user-images.githubusercontent.com/60104519/79699606-d776a580-8290-11ea-87b5-cd47c92f89b6.gif)
 <br />
+Here is the Tripcity app: [Tripcity App](http://app.umniedziala.jfdd14.is-academy.pl/ "To the Tripcity App")
+
+![tripcity-app-2](https://user-images.githubusercontent.com/60104519/79699614-e8271b80-8290-11ea-8784-844025d5df88.gif)
+
 And here is the mini-game: [Mini Game](http://www.umniedziala.jfdd14.is-academy.pl/game.html "To the game")
 
 ## Technologies
