@@ -35,7 +35,7 @@
     padding-left: 20px;
     font-size: 30px;
     text-decoration: none;
-    color: var(--color-blue);
+    color: white;
     font-weight: 900;
 }
 
@@ -55,6 +55,7 @@
         flex-direction: column;
         align-items: center;
         background: #000;
+        width: 100%;
     }
     header:hover .header__nav .header__button {
         display: block;

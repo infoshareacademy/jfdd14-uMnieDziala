@@ -1,10 +1,9 @@
-
 .about {
     width: 100%;
     max-width: 1300px;
     line-height: 1.5rem;
-    margin: 0 auto;
-    padding-top: 70px;
+    margin: 8% auto;
+    margin-bottom: 160px;
 }
 
 .about-us_title {
@@ -20,67 +19,136 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    align-content: space-around;
 }
 
-.about__pair {
+.test {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-items: center;
-}
-
-.about__picture, .about__text {
-    padding: 1rem;
-    text-align: center;
 }
 
 .about__picture {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    width: 180px;
-    height: auto;   
 }
 
 .about__name {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--color-dark);
-}
-
-.about__text {
-    font-size: 1rem;
-    color: var(--color-dark);
-    margin-bottom: 2rem;
-}
-
-.about__icons {
-    display: flex;
+    padding: 1rem;
 }
 
 .about__icon {
     padding: 0.5rem;
-    color: var(--color-blue);
+    color: var(--color-white);
+    font-size: 1.5rem;
 }
 
 .about__icon--hidden {
     display: none;
 }
 
+
+/* rotation */
+
+.about__icons.animation-back a {
+    z-index: 9;
+}
+
+.animation__container {
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+    perspective: 1000px;
+    margin: 1rem;
+}
+
+.animation__container__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+
+.animation__container:hover .animation__container__inner {
+    transform: rotateY(180deg);
+}
+
+.animation-front,
+.animation-back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.animation-front {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.animation-back {
+    background-color: var(--color-blue);
+    border-radius: 50%;
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* on scroll animation
+ */
+
+.pictures-animation {
+    animation-name: pictures-animation;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes pictures-animation {
+    0% {
+        transform: rotateY(0deg);
+        backface-visibility: visible;
+    }
+    99% {
+        backface-visibility: visible;
+    }
+    100% {
+        transform: rotateY(360deg);
+        backface-visibility: hidden;
+    }
+}
+
+
 /* 1024px for iPad Pro */
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .about-us_title {
         font-size: 1.8rem;
+        margin-bottom: 5rem;
     }
-
+    .about__name {
+        font-size: 1.4rem;
+    }
     .about-wrap {
         flex-direction: row;
+        justify-content: space-around;
     }
-
     .about__pair {
         flex-basis: 25%;
     }
-
-    .about__picture, .about__text {
-        padding: 2rem;
+    .animation__container {
+        width: 180px;
+        height: 180px;
     }
 }

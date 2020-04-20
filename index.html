@@ -14,21 +14,23 @@
     <link rel="stylesheet" type="text/css" href="functions.css">
     <link rel="stylesheet" href="details.css">
     <link rel="stylesheet" type="text/css" href="invitation.css">
+    <link rel="stylesheet" type="text/css" href="game-modal.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" type="text/css" href="cookies.css">
+    <link rel="stylesheet" type="text/css" href="calculator.css">
     <link rel="shortcut icon" href="img/favicon_package_v0.16 (4)/favicon-16x16.png" type="image/x-icon">
     <link rel="icon" href="img/favicon_package_v0.16 (4)/favicon-16x16.png" type="image/x-icon">
-
 </head>
 
 <body>
+
     <div class="content">
         <header class="header">
             <div class="header__menu">
-                <a href="#top" class="header__logo">
+                <a href="#hero" class="header__logo">
                     <img class="header__img" src="img/logo_white.png" alt="logo">
+                    <a href="#top" class="header__name active">tripcity</a>
                 </a>
-                <a href="#top" class="header__name">tripcity</a>
                 <a class="header__button">menu</a>
             </div>
             <nav class="header__nav">
@@ -39,7 +41,7 @@
             </nav>
         </header>
 
-        <section id="hero" class="hero hero--image1">
+        <section id="hero" class="menu hero hero--image1">
             <button id="leftArrow" class="hero__arrow"><i class="fas fa-chevron-left"></i></button>
             <div class="hero__main">
                 <h1 class="hero__title">Planujesz odwiedzić Trójmiasto?</h1>
@@ -50,7 +52,7 @@
             </div>
             <button id="rightArrow" class="hero__arrow"><i class="fas fa-chevron-right"></i></button>
         </section>
-        <section id="functions" class="functions">
+        <section id="functions" class="menu functions">
             <div class="functions__box">
                 <i class="fas fa-clipboard-list"></i>
                 <h2 class="functions__title">Stwórz plan wyjazdu</h2>
@@ -68,7 +70,7 @@
                 <h2 class="functions__title">Dziel się wrażeniami</h2>
             </div>
         </section>
-        <section id="details" class="details">
+        <section id="details" class="menu details">
             <div class="details__box">
                 <i class="fas fa-clipboard-list"></i>
                 <p class="details__text">Z pomocą tripcity stworzysz spersonalizowany plan wyjazdu do Trójmiasta</p>
@@ -102,93 +104,152 @@
                 <p class="details__text">Łatwo przejrzysz wybrane miejsca na mapach i zaplanujesz trasę</p>
             </div>
         </section>
-        <section id="sign-up" class="sign-up">
+        <div id="calculator" class="calculator">
+            <div class='calculator__info'>
+                <h2 class='calculator__h2'>Im dłużej jesteś z nami, tym mniej płacisz za subskrypcję.</h2>
+                <button id='openButton' type='button' class="calculator__modal--button">
+            <p>Wylicz swoją zniżkę</p>
+        </button>
+            </div>
+            <div class='calculator__dialog--modalBox'>
+                <dialog open id='calculator__dialog' class="calculator__dialog">
+                    <form method="dialog" class="calculator__dialog--content">
+                        <label class="calculator__dialog--label">Wykup subskrypcję naszej aplikacji!<br>Im dłuższy okres subskrypcji, tym większe zniżki otrzymasz od nas do:<br> restauracji, muzeów i innych atrakcji</label>
+                        <div class='calculator__slidecontainer'>
+                            <input oninput='checkSliderPosition()' id='calculator__dialog--input' class="calculator__dialog--input" type='range' min='0' max='3' step='1' list='calculator__dialog--tickmarsk' value='0'>
+                            <div class='calculator__dialog--tickmarsk'>
+                                <p>0 m/c</p>
+                                <p>3 m/c</p>
+                                <p>6 m/c</p>
+                                <p>12 m/c</p>
+                            </div>
+                        </div>
+                        <output class="calculator__dialog--output">
+                    <div class='priceWithoutDiscount'>cena podstawowa
+                        <p id='calculator__textNormalPrice'class='textNormalPrice'></p>
+                    </div>
+                    <div class='priceWithDiscount'>cena po zniżce
+                        <p id='calculator__textDiscountPrice'class='textDiscountPrice'></p>
+                    </div>
+                </output>
+                        <div class="calculator__checkbox">
+                            <label class="calculator__checkbox--label">emeryci / studenci +5% zniżki <input type="checkbox" id='calculator__dialog--checkbox' class='calculator__dialog--checkbox'></label>
+                        </div>
+                        <menu class="calculator__dialog--menu">
+                            <button id='calculator__dialog--buttonAccept' class="calculator__dialog--button" type="button" value="Potwiedź">Potwierdź</button>
+                            <button id='calculator__dialog--buttonExit' class="calculator__dialog--button" type="button" value="wyjdź">Wyjdź</button>
+                        </menu>
+                    </form>
+                </dialog>
+            </div>
+        </div>
+
+        <section id="sign-up" class="menu sign-up">
             <h3 class="sign-up__title">
                 Chcesz zwiedzić z nami Trójmiasto? <br>Zostaw nam maila a poinformujemy Cię, gdy pojawią się nowe funkcje.
             </h3>
             <form class="sign-up__form">
-                <input class="form__input" type="email" name="input" placeholder="Tu wpisz maila" required value="">
-                <input class="form__button" type="submit" value="ok">
+                <input class="form__input" type="email" name="input" placeholder="Tu wpisz adres e-mail" required value="">
+                <input class="form__button" type="submit" value="Wyślij">
             </form>
             <p class="form__info">Na podany adres zostanie wysłany tylko jeden email. Twoje dane są z nami bezpieczne.</p>
         </section>
-        <section id="about" class="about">
+        <section id="about" class="menu about">
             <h2 class="about-us_title">O twórcach aplikacji</h2>
             <div class="about-wrap">
-                <div class="about__pair">
-                    <div class="picture-wrap">
-                        <img class="about__picture" src="img/julia.jpg" alt="zdjęcie">
+                <div class="test">
+                    <div class="about__animation animation__container ">
+                        <div class="about__pair animation__container__inner">
+                            <div class="picture-wrap animation-front">
+                                <img class="about__picture" src="img/julia.jpg" alt="zdjęcie">
+                            </div>
+                            <div class="about__icons animation-back">
+                                <a href="https://www.linkedin.com/in/julia-%C5%82ojek/" target="blank"><i class="about__icon fab fa-linkedin"></i></a>
+                                <a href="https://github.com/JuliaLojek" target="blank"><i class="about__icon fab fa-github"></i></a>
+                                <a href="https://julialojek.github.io/about-me/" target="blank"><i class="about__icon fas fa-link"></i></a>
+                            </div>
+                        </div>
                     </div>
                     <p class="about__name">Julia Łojek</p>
-                    <div class="about__icons">
-                        <a href="https://www.linkedin.com/in/julia-%C5%82ojek/" target="blank"><i class="about__icon fab fa-linkedin"></i></a>
-                        <a href="https://github.com/JuliaLojek" target="blank"><i class="about__icon fab fa-github"></i></a>
-                        <a href="https://julialojek.github.io/about-me/" target="blank"><i class="about__icon fas fa-link"></i></a>
-                    </div>
-                    <p class="about__text">
-                        Z wykształcenia architektka wnętrz, obecnie w trakcie przebranżowienia na junior front-end developerkę. Uwielbia podróże i chodzenie po górach.
-                    </p>
                 </div>
-                <div class="about__pair">
-                    <div class="picture-wrap">
-                        <img class="about__picture" src="img/pawel.png" alt="zdjęcie">
+                <div class="test">
+                    <div class="about__animation animation__container ">
+                        <div class="about__pair animation__container__inner">
+                            <div class="picture-wrap animation-front">
+                                <img class="about__picture" src="img/pawel.png" alt="zdjęcie">
+                            </div>
+                            <div class="about__icons animation-back">
+                                <a href="https://www.linkedin.com/in/paweł-zarzycki-a38a40156" target="blank"><i class="about__icon fab fa-linkedin"></i></a>
+                                <a href="https://github.com/zazulec" target="blank"><i class="about__icon fab fa-github"></i></a>
+                                <a href="https://zazulec.github.io/Pawel-Zarzycki/" target="blank"><i class="about__icon fas fa-link"></i></a>
+                            </div>
+                        </div>
                     </div>
                     <p class="about__name">Paweł Zarzycki</p>
-                    <div class="about__icons">
-                        <a href="https://www.linkedin.com/in/paweł-zarzycki-a38a40156" target="blank"><i class="about__icon fab fa-linkedin"></i></a>
-                        <a href="https://github.com/zazulec" target="blank"><i class="about__icon fab fa-github"></i></a>
-                        <a href="https://zazulec.github.io/Pawel-Zarzycki/" target="blank"><i class="about__icon fas fa-link"></i></a>
-                    </div>
-                    <p class="about__text">
-                        Po ośmiu latach w logistyce podjął decyzję o zmianie branży na IT. Obecnie programuje w językach Html 5, Css 3, JavaScript.
-                    </p>
                 </div>
-                <div class="about__pair">
-                    <div class="picture-wrap">
-                        <img class="about__picture" src="img/robert.png" alt="zdjęcie">
+                <div class="test">
+                    <div class="about__animation animation__container ">
+                        <div class="about__pair animation__container__inner">
+                            <div class="picture-wrap animation-front">
+                                <img class="about__picture" src="img/robert.png" alt="zdjęcie">
+                            </div>
+                            <div class="about__icons animation-back">
+                                <a href="https://www.linkedin.com/in/robert-pasieczny" target="blank"><i class="about__icon fab fa-linkedin"></i></a>
+                                <a href="https://github.com/pasrobert" target="blank"><i class="about__icon fab fa-github"></i></a>
+                                <a target="blank"><i class="about__icon about__icon--hidden fas fa-link"></i></a>
+                            </div>
+                        </div>
                     </div>
                     <p class="about__name">Robert Pasieczny</p>
-                    <div class="about__icons">
-                        <a href="https://www.linkedin.com/in/robert-pasieczny" target="blank"><i class="about__icon fab fa-linkedin"></i></a>
-                        <a href="https://github.com/pasrobert" target="blank"><i class="about__icon fab fa-github"></i></a>
-                        <a target="blank"><i class="about__icon about__icon--hidden fas fa-link"></i></a>
-                    </div>
-                    <p class="about__text">
-                        Dotychczas pracował w gastronomii przygotowując sushi. Obecnie jest w trakcie przebranżowienia w kierunku Front-end developera. Interesuje się muzyką i sportem.
-                    </p>
                 </div>
-                <div class="about__pair">
-                    <div class="picture-wrap">
-                        <img class="about__picture" src="img/sabina.png" alt="zdjęcie">
+                <div class="test">
+                    <div class="about__animation animation__container ">
+                        <div class="about__pair animation__container__inner">
+                            <div class="picture-wrap animation-front">
+                                <img class="about__picture" src="img/sabina.png" alt="zdjęcie">
+                            </div>
+                            <div class="about__icons animation-back">
+                                <a href="https://www.linkedin.com/in/sabina-sadowska-04919b28/" target="blank"><i class="about__icon fab fa-linkedin"></i></a>
+                                <a href="https://github.com/SabinaSadowska" target="blank"><i class="about__icon fab fa-github"></i></a>
+                                <a href="https://sabinasadowska.github.io/portfolio/" target="blank"><i class="about__icon fas fa-link" target="blank"></i></a>
+                            </div>
+                        </div>
                     </div>
                     <p class="about__name">Sabina Sadowska</p>
-                    <div class="about__icons">
-                        <a href="https://www.linkedin.com/in/sabina-sadowska-04919b28/" target="blank"><i class="about__icon fab fa-linkedin"></i></a>
-                        <a href="https://github.com/SabinaSadowska" target="blank"><i class="about__icon fab fa-github"></i></a>
-                        <a href="https://sabinasadowska.github.io/portfolio/" target="blank"><i class="about__icon fas fa-link" target="blank"></i></a>
-                    </div>
-                    <p class="about__text">
-                        Do tej pory pracowała w marketingu i na stanowiskach związanych z językiem włoskim. Aktualnie zainteresowana budowaniem aplikacji internetowych.
-                    </p>
                 </div>
-            </div>
         </section>
+
         <footer class="footer">
-            <p class="footer__text">&copy; 2020 uMnieDziała</p>
-            <p class="footer__small-text">All Rights Reserved</p>
+            <p class="footer__text ">&copy; 2020 uMnieDziała</p>
+            <p class="footer__small-text ">All Rights Reserved</p>
         </footer>
+        </div>
     </div>
-    <section id="cookie" class="cookie">
+    <div id="cookie" class="cookie">
         <div class="cookie__container">
             <p class='cookie__container--p'>
-                Używamy plików cookie, aby zrozumieć, w jaki sposób korzystasz z naszej witryny i aby poprawić Twoje wrażenia. Obejmuje to personalizowanie treści i reklam.
+                    Używamy plików cookie, aby zrozumieć, w jaki sposób korzystasz z naszej witryny i aby poprawić Twoje wrażenia. Obejmuje to personalizowanie treści i reklam.
             </p>
-            <button class="cookie__container--button" onclick="cookieSaveToLocalStorage()">OK</button>
+            <button class="cookie__container--button " onclick="cookieSaveToLocalStorage() ">OK</button>
         </div>
-    </section>
+    </div>
+    <div class="game-modal">
+        <div class="game-modal__wrapper">
+            <h2 class="game-modal__text">Dziękujemy!</h2>
+            <h2 class="game-modal__text">Zagraj w naszą grę i dopłyń na Hel!</h2>
+            <div class="game-modal__btn-wrapper" >
+                <a href="game.html" target="blank"><button class="game-modal__btn game-modal__btn--play" type="button" formaction="game.html">Gram!</button></a>
+                <button class="game-modal__btn game-modal__btn--quit">Nie gram</button>
+            </div>
+        </div>
+    </div>
     <script src="scripts/hero.js"></script>
     <script src="scripts/form.js"></script>
+    <script src="scripts/nav-backlight.js"></script>
+    <script src="scripts/about-us-animation.js"></script>
     <script src="scripts/cookie.js"></script>
+    <script src="scripts/calculator.js "></script>
+    <script src="scripts/game-modal.js"></script>
 </body>
 
 </html>
