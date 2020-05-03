@@ -1,5 +1,5 @@
 .modal__instruction {
-    display: block;
+    display: none;
     position: fixed;
     z-index: 1;
     padding-top: 400px;

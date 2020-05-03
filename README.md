@@ -8,7 +8,7 @@
 - on the landing page you will also find the main functions of the Tipcity application,
 - the Tripcity application can be used for free, but also after purchasing a subscription it receives additional functions. Therefore, the landing page has a subscription calculator that will easily calculate the cost of the subscription.
 - if you like the Tripcity application you can always leave us your mail and we will inform you about new functionalities and promotions.
-- I'd almost forget, we have a little surprise for you. If you leave us your email, we will thank you with "probably" the best video game in the Pomeranian province called "swim to Hel(l)" ... good luck.
+- I'd almost forget, we have a little surprise for you. If you leave us your email, we will thank you with "probably" the best video game in the Pomeranian province called "swim Hel(l)" ... good luck.
 
 ### You can find, test and use **tripcity landing page** here: [Tripcity landing Page](http://www.umniedziala.jfdd14.is-academy.pl/ "To the landing page")
 
